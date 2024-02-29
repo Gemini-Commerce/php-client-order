@@ -6,9 +6,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tenant_id**| **string** |   | [optional]
-**order_id**| **string** |   | [optional]
-**items**| [**\GeminiCommerce\Order\Model\OrderFulfillmentItem[]**](OrderFulfillmentItem.md) |   | [optional]
+**tenant_id**| **string** |   |
+**order_id**| **string** |   |
+**items**| [**\GeminiCommerce\Order\Model\OrderFulfillmentItem[]**](OrderFulfillmentItem.md) |   |
 
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

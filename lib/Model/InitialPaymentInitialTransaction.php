@@ -282,6 +282,9 @@ class InitialPaymentInitialTransaction implements ModelInterface, ArrayAccess, \
     {
         $invalidProperties = [];
 
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -300,7 +303,7 @@ class InitialPaymentInitialTransaction implements ModelInterface, ArrayAccess, \
     /**
      * Gets type
      *
-     * @return \GeminiCommerce\Order\Model\OrderTransactionType|null
+     * @return \GeminiCommerce\Order\Model\OrderTransactionType
      */
     public function getType()
     {
@@ -310,7 +313,7 @@ class InitialPaymentInitialTransaction implements ModelInterface, ArrayAccess, \
     /**
      * Sets type
      *
-     * @param \GeminiCommerce\Order\Model\OrderTransactionType|null $type type
+     * @param \GeminiCommerce\Order\Model\OrderTransactionType $type type
      *
      * @return self
      */

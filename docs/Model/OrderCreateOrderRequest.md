@@ -6,23 +6,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tenant_id**| **string** |   | [optional]
-**number**| **string** |   | [optional]
+**tenant_id**| **string** |   |
+**number**| **string** |   |
 **channel**| **string** |   | [optional]
-**market**| **string** |   | [optional]
-**locale**| **string** |   | [optional]
-**items**| [**\GeminiCommerce\Order\Model\OrderOrderDataItem[]**](OrderOrderDataItem.md) |   | [optional]
+**market**| **string** |   |
+**locale**| **string** |   |
+**items**| [**\GeminiCommerce\Order\Model\OrderOrderDataItem[]**](OrderOrderDataItem.md) |   |
 **payments_info**| [**\GeminiCommerce\Order\Model\OrderDataPaymentInfo[]**](OrderDataPaymentInfo.md) |   | [optional]
 **shipments_info**| [**\GeminiCommerce\Order\Model\OrderDataShipmentInfo[]**](OrderDataShipmentInfo.md) |   | [optional]
 **promotions**| [**\GeminiCommerce\Order\Model\OrderDataPromotionInfo[]**](OrderDataPromotionInfo.md) |   | [optional]
 **payments**| [**\GeminiCommerce\Order\Model\CreateOrderRequestInitialPayment[]**](CreateOrderRequestInitialPayment.md) |   | [optional]
-**currency**| [**\GeminiCommerce\Order\Model\OrderCurrency**](OrderCurrency.md) |  for more information please, see Model/OrderCurrency.php  | [optional]
-**subtotals**| [**array<string,\GeminiCommerce\Order\Model\OrderDataSubtotal>**](OrderDataSubtotal.md) |   | [optional]
-**totals**| [**array<string,\GeminiCommerce\Order\Model\OrderDataTotal>**](OrderDataTotal.md) |   | [optional]
-**vat_included**| **bool** |   | [optional]
-**billing_address**| [**\GeminiCommerce\Order\Model\OrderPostalAddress**](OrderPostalAddress.md) |   | [optional]
-**shipping_address**| [**\GeminiCommerce\Order\Model\OrderPostalAddress**](OrderPostalAddress.md) |   | [optional]
-**customer_info**| [**\GeminiCommerce\Order\Model\OrderDataCustomerInfo**](OrderDataCustomerInfo.md) |   | [optional]
+**currency**| [**\GeminiCommerce\Order\Model\OrderCurrency**](OrderCurrency.md) |  for more information please, see Model/OrderCurrency.php  |
+**subtotals**| [**array<string,\GeminiCommerce\Order\Model\OrderDataSubtotal>**](OrderDataSubtotal.md) |   |
+**totals**| [**array<string,\GeminiCommerce\Order\Model\OrderDataTotal>**](OrderDataTotal.md) |   |
+**vat_included**| **bool** |   |
+**billing_address**| [**\GeminiCommerce\Order\Model\OrderPostalAddress**](OrderPostalAddress.md) |   |
+**shipping_address**| [**\GeminiCommerce\Order\Model\OrderPostalAddress**](OrderPostalAddress.md) |   |
+**customer_info**| [**\GeminiCommerce\Order\Model\OrderDataCustomerInfo**](OrderDataCustomerInfo.md) |   |
 **cart_grn**| **string** |   | [optional]
 **on_hold**| **bool** |   | [optional]
 **notes**| **string** |   | [optional]

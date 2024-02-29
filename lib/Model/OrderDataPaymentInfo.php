@@ -338,6 +338,12 @@ class OrderDataPaymentInfo implements ModelInterface, ArrayAccess, \JsonSerializ
     {
         $invalidProperties = [];
 
+        if ($this->container['code'] === null) {
+            $invalidProperties[] = "'code' can't be null";
+        }
+        if ($this->container['amount'] === null) {
+            $invalidProperties[] = "'amount' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -356,7 +362,7 @@ class OrderDataPaymentInfo implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets code
      *
-     * @return string|null
+     * @return string
      */
     public function getCode()
     {
@@ -366,7 +372,7 @@ class OrderDataPaymentInfo implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets code
      *
-     * @param string|null $code code
+     * @param string $code code
      *
      * @return self
      */
@@ -410,7 +416,7 @@ class OrderDataPaymentInfo implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets amount
      *
-     * @return \GeminiCommerce\Order\Model\OrderMoney|null
+     * @return \GeminiCommerce\Order\Model\OrderMoney
      */
     public function getAmount()
     {
@@ -420,7 +426,7 @@ class OrderDataPaymentInfo implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets amount
      *
-     * @param \GeminiCommerce\Order\Model\OrderMoney|null $amount amount
+     * @param \GeminiCommerce\Order\Model\OrderMoney $amount amount
      *
      * @return self
      */

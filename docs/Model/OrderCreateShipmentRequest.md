@@ -6,12 +6,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tenant_id**| **string** |   | [optional]
-**order_id**| **string** |   | [optional]
-**items**| [**\GeminiCommerce\Order\Model\OrderShipmentItem[]**](OrderShipmentItem.md) |   | [optional]
-**address**| [**\GeminiCommerce\Order\Model\OrderPostalAddress**](OrderPostalAddress.md) |   | [optional]
+**tenant_id**| **string** |   |
+**order_id**| **string** |   |
+**items**| [**\GeminiCommerce\Order\Model\OrderShipmentItem[]**](OrderShipmentItem.md) |   |
+**address**| [**\GeminiCommerce\Order\Model\OrderPostalAddress**](OrderPostalAddress.md) |   |
 **from_address**| [**\GeminiCommerce\Order\Model\OrderPostalAddress**](OrderPostalAddress.md) |   | [optional]
 **return_address**| [**\GeminiCommerce\Order\Model\OrderPostalAddress**](OrderPostalAddress.md) |   | [optional]
+**tracking**| [**\GeminiCommerce\Order\Model\ShipmentTracking[]**](ShipmentTracking.md) |   | [optional]
+**return_tracking**| [**\GeminiCommerce\Order\Model\ShipmentTracking[]**](ShipmentTracking.md) |   | [optional]
 **code**| **string** |   | [optional]
 **method**| **string** |   | [optional]
 

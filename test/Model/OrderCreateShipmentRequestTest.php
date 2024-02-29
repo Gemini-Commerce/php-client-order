@@ -135,6 +135,24 @@ class OrderCreateShipmentRequestTest extends TestCase
     }
 
     /**
+     * Test attribute "tracking"
+     */
+    public function testPropertyTracking()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "return_tracking"
+     */
+    public function testPropertyReturnTracking()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "code"
      */
     public function testPropertyCode()

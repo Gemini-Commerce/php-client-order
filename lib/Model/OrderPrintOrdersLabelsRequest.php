@@ -282,6 +282,12 @@ class OrderPrintOrdersLabelsRequest implements ModelInterface, ArrayAccess, \Jso
     {
         $invalidProperties = [];
 
+        if ($this->container['tenant_id'] === null) {
+            $invalidProperties[] = "'tenant_id' can't be null";
+        }
+        if ($this->container['order_numbers'] === null) {
+            $invalidProperties[] = "'order_numbers' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -300,7 +306,7 @@ class OrderPrintOrdersLabelsRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets tenant_id
      *
-     * @return string|null
+     * @return string
      */
     public function getTenantId()
     {
@@ -310,7 +316,7 @@ class OrderPrintOrdersLabelsRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets tenant_id
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string $tenant_id tenant_id
      *
      * @return self
      */
@@ -327,7 +333,7 @@ class OrderPrintOrdersLabelsRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets order_numbers
      *
-     * @return string[]|null
+     * @return string[]
      */
     public function getOrderNumbers()
     {
@@ -337,7 +343,7 @@ class OrderPrintOrdersLabelsRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets order_numbers
      *
-     * @param string[]|null $order_numbers order_numbers
+     * @param string[] $order_numbers order_numbers
      *
      * @return self
      */

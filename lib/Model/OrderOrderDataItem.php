@@ -71,6 +71,8 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'row_vat_amount' => '\GeminiCommerce\Order\Model\OrderMoney',
         'discount_amount' => '\GeminiCommerce\Order\Model\OrderMoney',
         'row_base_price' => '\GeminiCommerce\Order\Model\OrderMoney',
+        'unit_custom_price' => '\GeminiCommerce\Order\Model\OrderMoney',
+        'row_custom_price' => '\GeminiCommerce\Order\Model\OrderMoney',
         'vat_percentage' => 'float',
         'vat_inaccurate' => 'bool',
         'vat_calculated' => 'bool',
@@ -82,7 +84,8 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'product_data' => 'string',
         'shipment_info_reference' => 'string',
         'promotion_grn' => 'string[]',
-        'product_is_virtual' => 'bool'
+        'product_is_virtual' => 'bool',
+        'product_configuration' => '\GeminiCommerce\Order\Model\ItemProductConfigurationStep[]'
     ];
 
     /**
@@ -106,6 +109,8 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'row_vat_amount' => null,
         'discount_amount' => null,
         'row_base_price' => null,
+        'unit_custom_price' => null,
+        'row_custom_price' => null,
         'vat_percentage' => 'float',
         'vat_inaccurate' => null,
         'vat_calculated' => null,
@@ -117,7 +122,8 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'product_data' => null,
         'shipment_info_reference' => null,
         'promotion_grn' => null,
-        'product_is_virtual' => null
+        'product_is_virtual' => null,
+        'product_configuration' => null
     ];
 
     /**
@@ -139,6 +145,8 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'row_vat_amount' => false,
         'discount_amount' => false,
         'row_base_price' => false,
+        'unit_custom_price' => false,
+        'row_custom_price' => false,
         'vat_percentage' => false,
         'vat_inaccurate' => false,
         'vat_calculated' => false,
@@ -150,7 +158,8 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'product_data' => false,
         'shipment_info_reference' => false,
         'promotion_grn' => false,
-        'product_is_virtual' => false
+        'product_is_virtual' => false,
+        'product_configuration' => false
     ];
 
     /**
@@ -252,6 +261,8 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'row_vat_amount' => 'rowVatAmount',
         'discount_amount' => 'discountAmount',
         'row_base_price' => 'rowBasePrice',
+        'unit_custom_price' => 'unitCustomPrice',
+        'row_custom_price' => 'rowCustomPrice',
         'vat_percentage' => 'vatPercentage',
         'vat_inaccurate' => 'vatInaccurate',
         'vat_calculated' => 'vatCalculated',
@@ -263,7 +274,8 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'product_data' => 'productData',
         'shipment_info_reference' => 'shipmentInfoReference',
         'promotion_grn' => 'promotionGrn',
-        'product_is_virtual' => 'productIsVirtual'
+        'product_is_virtual' => 'productIsVirtual',
+        'product_configuration' => 'productConfiguration'
     ];
 
     /**
@@ -285,6 +297,8 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'row_vat_amount' => 'setRowVatAmount',
         'discount_amount' => 'setDiscountAmount',
         'row_base_price' => 'setRowBasePrice',
+        'unit_custom_price' => 'setUnitCustomPrice',
+        'row_custom_price' => 'setRowCustomPrice',
         'vat_percentage' => 'setVatPercentage',
         'vat_inaccurate' => 'setVatInaccurate',
         'vat_calculated' => 'setVatCalculated',
@@ -296,7 +310,8 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'product_data' => 'setProductData',
         'shipment_info_reference' => 'setShipmentInfoReference',
         'promotion_grn' => 'setPromotionGrn',
-        'product_is_virtual' => 'setProductIsVirtual'
+        'product_is_virtual' => 'setProductIsVirtual',
+        'product_configuration' => 'setProductConfiguration'
     ];
 
     /**
@@ -318,6 +333,8 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'row_vat_amount' => 'getRowVatAmount',
         'discount_amount' => 'getDiscountAmount',
         'row_base_price' => 'getRowBasePrice',
+        'unit_custom_price' => 'getUnitCustomPrice',
+        'row_custom_price' => 'getRowCustomPrice',
         'vat_percentage' => 'getVatPercentage',
         'vat_inaccurate' => 'getVatInaccurate',
         'vat_calculated' => 'getVatCalculated',
@@ -329,7 +346,8 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'product_data' => 'getProductData',
         'shipment_info_reference' => 'getShipmentInfoReference',
         'promotion_grn' => 'getPromotionGrn',
-        'product_is_virtual' => 'getProductIsVirtual'
+        'product_is_virtual' => 'getProductIsVirtual',
+        'product_configuration' => 'getProductConfiguration'
     ];
 
     /**
@@ -402,6 +420,8 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
         $this->setIfExists('row_vat_amount', $data ?? [], null);
         $this->setIfExists('discount_amount', $data ?? [], null);
         $this->setIfExists('row_base_price', $data ?? [], null);
+        $this->setIfExists('unit_custom_price', $data ?? [], null);
+        $this->setIfExists('row_custom_price', $data ?? [], null);
         $this->setIfExists('vat_percentage', $data ?? [], null);
         $this->setIfExists('vat_inaccurate', $data ?? [], null);
         $this->setIfExists('vat_calculated', $data ?? [], null);
@@ -414,6 +434,7 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
         $this->setIfExists('shipment_info_reference', $data ?? [], null);
         $this->setIfExists('promotion_grn', $data ?? [], null);
         $this->setIfExists('product_is_virtual', $data ?? [], null);
+        $this->setIfExists('product_configuration', $data ?? [], null);
     }
 
     /**
@@ -810,6 +831,60 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
+     * Gets unit_custom_price
+     *
+     * @return \GeminiCommerce\Order\Model\OrderMoney|null
+     */
+    public function getUnitCustomPrice()
+    {
+        return $this->container['unit_custom_price'];
+    }
+
+    /**
+     * Sets unit_custom_price
+     *
+     * @param \GeminiCommerce\Order\Model\OrderMoney|null $unit_custom_price unit_custom_price
+     *
+     * @return self
+     */
+    public function setUnitCustomPrice($unit_custom_price)
+    {
+        if (is_null($unit_custom_price)) {
+            throw new \InvalidArgumentException('non-nullable unit_custom_price cannot be null');
+        }
+        $this->container['unit_custom_price'] = $unit_custom_price;
+
+        return $this;
+    }
+
+    /**
+     * Gets row_custom_price
+     *
+     * @return \GeminiCommerce\Order\Model\OrderMoney|null
+     */
+    public function getRowCustomPrice()
+    {
+        return $this->container['row_custom_price'];
+    }
+
+    /**
+     * Sets row_custom_price
+     *
+     * @param \GeminiCommerce\Order\Model\OrderMoney|null $row_custom_price row_custom_price
+     *
+     * @return self
+     */
+    public function setRowCustomPrice($row_custom_price)
+    {
+        if (is_null($row_custom_price)) {
+            throw new \InvalidArgumentException('non-nullable row_custom_price cannot be null');
+        }
+        $this->container['row_custom_price'] = $row_custom_price;
+
+        return $this;
+    }
+
+    /**
      * Gets vat_percentage
      *
      * @return float|null
@@ -1129,6 +1204,33 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
             throw new \InvalidArgumentException('non-nullable product_is_virtual cannot be null');
         }
         $this->container['product_is_virtual'] = $product_is_virtual;
+
+        return $this;
+    }
+
+    /**
+     * Gets product_configuration
+     *
+     * @return \GeminiCommerce\Order\Model\ItemProductConfigurationStep[]|null
+     */
+    public function getProductConfiguration()
+    {
+        return $this->container['product_configuration'];
+    }
+
+    /**
+     * Sets product_configuration
+     *
+     * @param \GeminiCommerce\Order\Model\ItemProductConfigurationStep[]|null $product_configuration product_configuration
+     *
+     * @return self
+     */
+    public function setProductConfiguration($product_configuration)
+    {
+        if (is_null($product_configuration)) {
+            throw new \InvalidArgumentException('non-nullable product_configuration cannot be null');
+        }
+        $this->container['product_configuration'] = $product_configuration;
 
         return $this;
     }

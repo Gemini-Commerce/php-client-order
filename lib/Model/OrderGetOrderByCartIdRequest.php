@@ -282,6 +282,12 @@ class OrderGetOrderByCartIdRequest implements ModelInterface, ArrayAccess, \Json
     {
         $invalidProperties = [];
 
+        if ($this->container['tenant_id'] === null) {
+            $invalidProperties[] = "'tenant_id' can't be null";
+        }
+        if ($this->container['cart_id'] === null) {
+            $invalidProperties[] = "'cart_id' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -300,7 +306,7 @@ class OrderGetOrderByCartIdRequest implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets tenant_id
      *
-     * @return string|null
+     * @return string
      */
     public function getTenantId()
     {
@@ -310,7 +316,7 @@ class OrderGetOrderByCartIdRequest implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets tenant_id
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string $tenant_id tenant_id
      *
      * @return self
      */
@@ -327,7 +333,7 @@ class OrderGetOrderByCartIdRequest implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets cart_id
      *
-     * @return string|null
+     * @return string
      */
     public function getCartId()
     {
@@ -337,7 +343,7 @@ class OrderGetOrderByCartIdRequest implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets cart_id
      *
-     * @param string|null $cart_id cart_id
+     * @param string $cart_id cart_id
      *
      * @return self
      */

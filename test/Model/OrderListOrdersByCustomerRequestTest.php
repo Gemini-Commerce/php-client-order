@@ -115,4 +115,13 @@ class OrderListOrdersByCustomerRequestTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "order_by"
+     */
+    public function testPropertyOrderBy()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

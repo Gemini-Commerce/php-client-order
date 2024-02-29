@@ -66,7 +66,8 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
         'status_filter' => '\GeminiCommerce\Order\Model\OrderStatusFilter',
         'from_date' => '\DateTime',
         'to_date' => '\DateTime',
-        'payment_filter' => '\GeminiCommerce\Order\Model\OrderPaymentFilter'
+        'payment_filter' => '\GeminiCommerce\Order\Model\OrderPaymentFilter',
+        'agent_grn' => 'string'
     ];
 
     /**
@@ -85,7 +86,8 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
         'status_filter' => null,
         'from_date' => 'date-time',
         'to_date' => 'date-time',
-        'payment_filter' => null
+        'payment_filter' => null,
+        'agent_grn' => null
     ];
 
     /**
@@ -102,7 +104,8 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
         'status_filter' => false,
         'from_date' => false,
         'to_date' => false,
-        'payment_filter' => false
+        'payment_filter' => false,
+        'agent_grn' => false
     ];
 
     /**
@@ -199,7 +202,8 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
         'status_filter' => 'statusFilter',
         'from_date' => 'fromDate',
         'to_date' => 'toDate',
-        'payment_filter' => 'paymentFilter'
+        'payment_filter' => 'paymentFilter',
+        'agent_grn' => 'agentGrn'
     ];
 
     /**
@@ -216,7 +220,8 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
         'status_filter' => 'setStatusFilter',
         'from_date' => 'setFromDate',
         'to_date' => 'setToDate',
-        'payment_filter' => 'setPaymentFilter'
+        'payment_filter' => 'setPaymentFilter',
+        'agent_grn' => 'setAgentGrn'
     ];
 
     /**
@@ -233,7 +238,8 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
         'status_filter' => 'getStatusFilter',
         'from_date' => 'getFromDate',
         'to_date' => 'getToDate',
-        'payment_filter' => 'getPaymentFilter'
+        'payment_filter' => 'getPaymentFilter',
+        'agent_grn' => 'getAgentGrn'
     ];
 
     /**
@@ -302,6 +308,7 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
         $this->setIfExists('from_date', $data ?? [], null);
         $this->setIfExists('to_date', $data ?? [], null);
         $this->setIfExists('payment_filter', $data ?? [], null);
+        $this->setIfExists('agent_grn', $data ?? [], null);
     }
 
     /**
@@ -331,6 +338,9 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
     {
         $invalidProperties = [];
 
+        if ($this->container['tenant_id'] === null) {
+            $invalidProperties[] = "'tenant_id' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -349,7 +359,7 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets tenant_id
      *
-     * @return string|null
+     * @return string
      */
     public function getTenantId()
     {
@@ -359,7 +369,7 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets tenant_id
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string $tenant_id tenant_id
      *
      * @return self
      */
@@ -585,6 +595,33 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
             throw new \InvalidArgumentException('non-nullable payment_filter cannot be null');
         }
         $this->container['payment_filter'] = $payment_filter;
+
+        return $this;
+    }
+
+    /**
+     * Gets agent_grn
+     *
+     * @return string|null
+     */
+    public function getAgentGrn()
+    {
+        return $this->container['agent_grn'];
+    }
+
+    /**
+     * Sets agent_grn
+     *
+     * @param string|null $agent_grn agent_grn
+     *
+     * @return self
+     */
+    public function setAgentGrn($agent_grn)
+    {
+        if (is_null($agent_grn)) {
+            throw new \InvalidArgumentException('non-nullable agent_grn cannot be null');
+        }
+        $this->container['agent_grn'] = $agent_grn;
 
         return $this;
     }

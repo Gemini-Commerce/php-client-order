@@ -289,6 +289,12 @@ class OrderReportShipmentMissingStockRequest implements ModelInterface, ArrayAcc
     {
         $invalidProperties = [];
 
+        if ($this->container['tenant_id'] === null) {
+            $invalidProperties[] = "'tenant_id' can't be null";
+        }
+        if ($this->container['shipment_id'] === null) {
+            $invalidProperties[] = "'shipment_id' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -307,7 +313,7 @@ class OrderReportShipmentMissingStockRequest implements ModelInterface, ArrayAcc
     /**
      * Gets tenant_id
      *
-     * @return string|null
+     * @return string
      */
     public function getTenantId()
     {
@@ -317,7 +323,7 @@ class OrderReportShipmentMissingStockRequest implements ModelInterface, ArrayAcc
     /**
      * Sets tenant_id
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string $tenant_id tenant_id
      *
      * @return self
      */
@@ -334,7 +340,7 @@ class OrderReportShipmentMissingStockRequest implements ModelInterface, ArrayAcc
     /**
      * Gets shipment_id
      *
-     * @return string|null
+     * @return string
      */
     public function getShipmentId()
     {
@@ -344,7 +350,7 @@ class OrderReportShipmentMissingStockRequest implements ModelInterface, ArrayAcc
     /**
      * Sets shipment_id
      *
-     * @param string|null $shipment_id shipment_id
+     * @param string $shipment_id shipment_id
      *
      * @return self
      */

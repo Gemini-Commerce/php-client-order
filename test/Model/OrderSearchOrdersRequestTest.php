@@ -160,4 +160,13 @@ class OrderSearchOrdersRequestTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "agent_grn"
+     */
+    public function testPropertyAgentGrn()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

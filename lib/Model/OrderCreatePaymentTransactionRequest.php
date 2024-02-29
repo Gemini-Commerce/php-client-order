@@ -296,6 +296,15 @@ class OrderCreatePaymentTransactionRequest implements ModelInterface, ArrayAcces
     {
         $invalidProperties = [];
 
+        if ($this->container['tenant_id'] === null) {
+            $invalidProperties[] = "'tenant_id' can't be null";
+        }
+        if ($this->container['payment_id'] === null) {
+            $invalidProperties[] = "'payment_id' can't be null";
+        }
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -314,7 +323,7 @@ class OrderCreatePaymentTransactionRequest implements ModelInterface, ArrayAcces
     /**
      * Gets tenant_id
      *
-     * @return string|null
+     * @return string
      */
     public function getTenantId()
     {
@@ -324,7 +333,7 @@ class OrderCreatePaymentTransactionRequest implements ModelInterface, ArrayAcces
     /**
      * Sets tenant_id
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string $tenant_id tenant_id
      *
      * @return self
      */
@@ -341,7 +350,7 @@ class OrderCreatePaymentTransactionRequest implements ModelInterface, ArrayAcces
     /**
      * Gets payment_id
      *
-     * @return string|null
+     * @return string
      */
     public function getPaymentId()
     {
@@ -351,7 +360,7 @@ class OrderCreatePaymentTransactionRequest implements ModelInterface, ArrayAcces
     /**
      * Sets payment_id
      *
-     * @param string|null $payment_id payment_id
+     * @param string $payment_id payment_id
      *
      * @return self
      */
@@ -368,7 +377,7 @@ class OrderCreatePaymentTransactionRequest implements ModelInterface, ArrayAcces
     /**
      * Gets type
      *
-     * @return \GeminiCommerce\Order\Model\OrderTransactionType|null
+     * @return \GeminiCommerce\Order\Model\OrderTransactionType
      */
     public function getType()
     {
@@ -378,7 +387,7 @@ class OrderCreatePaymentTransactionRequest implements ModelInterface, ArrayAcces
     /**
      * Sets type
      *
-     * @param \GeminiCommerce\Order\Model\OrderTransactionType|null $type type
+     * @param \GeminiCommerce\Order\Model\OrderTransactionType $type type
      *
      * @return self
      */

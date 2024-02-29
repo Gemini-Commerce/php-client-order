@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**created_at**| **\DateTime** |   | [optional]
+**created_at**| **\DateTime** |   | [optional] [readonly]
 **payment_id**| **string** |   | [optional]
 **id**| **string** |   | [optional]
 **type**| [**\GeminiCommerce\Order\Model\OrderTransactionType**](OrderTransactionType.md) |  for more information please, see Model/OrderTransactionType.php  | [optional]

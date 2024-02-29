@@ -289,6 +289,15 @@ class OrderCreateFulfillmentRequest implements ModelInterface, ArrayAccess, \Jso
     {
         $invalidProperties = [];
 
+        if ($this->container['tenant_id'] === null) {
+            $invalidProperties[] = "'tenant_id' can't be null";
+        }
+        if ($this->container['order_id'] === null) {
+            $invalidProperties[] = "'order_id' can't be null";
+        }
+        if ($this->container['items'] === null) {
+            $invalidProperties[] = "'items' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -307,7 +316,7 @@ class OrderCreateFulfillmentRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets tenant_id
      *
-     * @return string|null
+     * @return string
      */
     public function getTenantId()
     {
@@ -317,7 +326,7 @@ class OrderCreateFulfillmentRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets tenant_id
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string $tenant_id tenant_id
      *
      * @return self
      */
@@ -334,7 +343,7 @@ class OrderCreateFulfillmentRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets order_id
      *
-     * @return string|null
+     * @return string
      */
     public function getOrderId()
     {
@@ -344,7 +353,7 @@ class OrderCreateFulfillmentRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets order_id
      *
-     * @param string|null $order_id order_id
+     * @param string $order_id order_id
      *
      * @return self
      */
@@ -361,7 +370,7 @@ class OrderCreateFulfillmentRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets items
      *
-     * @return \GeminiCommerce\Order\Model\OrderFulfillmentItem[]|null
+     * @return \GeminiCommerce\Order\Model\OrderFulfillmentItem[]
      */
     public function getItems()
     {
@@ -371,7 +380,7 @@ class OrderCreateFulfillmentRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets items
      *
-     * @param \GeminiCommerce\Order\Model\OrderFulfillmentItem[]|null $items items
+     * @param \GeminiCommerce\Order\Model\OrderFulfillmentItem[] $items items
      *
      * @return self
      */

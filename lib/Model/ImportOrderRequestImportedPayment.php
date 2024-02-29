@@ -61,7 +61,8 @@ class ImportOrderRequestImportedPayment implements ModelInterface, ArrayAccess, 
         'code' => 'string',
         'additional_info' => 'string',
         'amounts' => '\GeminiCommerce\Order\Model\OrderPaymentAmount[]',
-        'cc_info' => '\GeminiCommerce\Order\Model\PaymentCcInfo'
+        'cc_info' => '\GeminiCommerce\Order\Model\PaymentCcInfo',
+        'is_upfront' => 'bool'
     ];
 
     /**
@@ -75,7 +76,8 @@ class ImportOrderRequestImportedPayment implements ModelInterface, ArrayAccess, 
         'code' => null,
         'additional_info' => null,
         'amounts' => null,
-        'cc_info' => null
+        'cc_info' => null,
+        'is_upfront' => null
     ];
 
     /**
@@ -87,7 +89,8 @@ class ImportOrderRequestImportedPayment implements ModelInterface, ArrayAccess, 
         'code' => false,
         'additional_info' => false,
         'amounts' => false,
-        'cc_info' => false
+        'cc_info' => false,
+        'is_upfront' => false
     ];
 
     /**
@@ -179,7 +182,8 @@ class ImportOrderRequestImportedPayment implements ModelInterface, ArrayAccess, 
         'code' => 'code',
         'additional_info' => 'additionalInfo',
         'amounts' => 'amounts',
-        'cc_info' => 'ccInfo'
+        'cc_info' => 'ccInfo',
+        'is_upfront' => 'isUpfront'
     ];
 
     /**
@@ -191,7 +195,8 @@ class ImportOrderRequestImportedPayment implements ModelInterface, ArrayAccess, 
         'code' => 'setCode',
         'additional_info' => 'setAdditionalInfo',
         'amounts' => 'setAmounts',
-        'cc_info' => 'setCcInfo'
+        'cc_info' => 'setCcInfo',
+        'is_upfront' => 'setIsUpfront'
     ];
 
     /**
@@ -203,7 +208,8 @@ class ImportOrderRequestImportedPayment implements ModelInterface, ArrayAccess, 
         'code' => 'getCode',
         'additional_info' => 'getAdditionalInfo',
         'amounts' => 'getAmounts',
-        'cc_info' => 'getCcInfo'
+        'cc_info' => 'getCcInfo',
+        'is_upfront' => 'getIsUpfront'
     ];
 
     /**
@@ -267,6 +273,7 @@ class ImportOrderRequestImportedPayment implements ModelInterface, ArrayAccess, 
         $this->setIfExists('additional_info', $data ?? [], null);
         $this->setIfExists('amounts', $data ?? [], null);
         $this->setIfExists('cc_info', $data ?? [], null);
+        $this->setIfExists('is_upfront', $data ?? [], null);
     }
 
     /**
@@ -296,6 +303,12 @@ class ImportOrderRequestImportedPayment implements ModelInterface, ArrayAccess, 
     {
         $invalidProperties = [];
 
+        if ($this->container['code'] === null) {
+            $invalidProperties[] = "'code' can't be null";
+        }
+        if ($this->container['amounts'] === null) {
+            $invalidProperties[] = "'amounts' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -314,7 +327,7 @@ class ImportOrderRequestImportedPayment implements ModelInterface, ArrayAccess, 
     /**
      * Gets code
      *
-     * @return string|null
+     * @return string
      */
     public function getCode()
     {
@@ -324,7 +337,7 @@ class ImportOrderRequestImportedPayment implements ModelInterface, ArrayAccess, 
     /**
      * Sets code
      *
-     * @param string|null $code code
+     * @param string $code code
      *
      * @return self
      */
@@ -368,7 +381,7 @@ class ImportOrderRequestImportedPayment implements ModelInterface, ArrayAccess, 
     /**
      * Gets amounts
      *
-     * @return \GeminiCommerce\Order\Model\OrderPaymentAmount[]|null
+     * @return \GeminiCommerce\Order\Model\OrderPaymentAmount[]
      */
     public function getAmounts()
     {
@@ -378,7 +391,7 @@ class ImportOrderRequestImportedPayment implements ModelInterface, ArrayAccess, 
     /**
      * Sets amounts
      *
-     * @param \GeminiCommerce\Order\Model\OrderPaymentAmount[]|null $amounts amounts
+     * @param \GeminiCommerce\Order\Model\OrderPaymentAmount[] $amounts amounts
      *
      * @return self
      */
@@ -415,6 +428,33 @@ class ImportOrderRequestImportedPayment implements ModelInterface, ArrayAccess, 
             throw new \InvalidArgumentException('non-nullable cc_info cannot be null');
         }
         $this->container['cc_info'] = $cc_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_upfront
+     *
+     * @return bool|null
+     */
+    public function getIsUpfront()
+    {
+        return $this->container['is_upfront'];
+    }
+
+    /**
+     * Sets is_upfront
+     *
+     * @param bool|null $is_upfront is_upfront
+     *
+     * @return self
+     */
+    public function setIsUpfront($is_upfront)
+    {
+        if (is_null($is_upfront)) {
+            throw new \InvalidArgumentException('non-nullable is_upfront cannot be null');
+        }
+        $this->container['is_upfront'] = $is_upfront;
 
         return $this;
     }

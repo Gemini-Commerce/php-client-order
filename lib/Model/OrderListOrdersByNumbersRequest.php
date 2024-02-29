@@ -296,6 +296,12 @@ class OrderListOrdersByNumbersRequest implements ModelInterface, ArrayAccess, \J
     {
         $invalidProperties = [];
 
+        if ($this->container['tenant_id'] === null) {
+            $invalidProperties[] = "'tenant_id' can't be null";
+        }
+        if ($this->container['numbers'] === null) {
+            $invalidProperties[] = "'numbers' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -314,7 +320,7 @@ class OrderListOrdersByNumbersRequest implements ModelInterface, ArrayAccess, \J
     /**
      * Gets tenant_id
      *
-     * @return string|null
+     * @return string
      */
     public function getTenantId()
     {
@@ -324,7 +330,7 @@ class OrderListOrdersByNumbersRequest implements ModelInterface, ArrayAccess, \J
     /**
      * Sets tenant_id
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string $tenant_id tenant_id
      *
      * @return self
      */
@@ -341,7 +347,7 @@ class OrderListOrdersByNumbersRequest implements ModelInterface, ArrayAccess, \J
     /**
      * Gets numbers
      *
-     * @return string[]|null
+     * @return string[]
      */
     public function getNumbers()
     {
@@ -351,7 +357,7 @@ class OrderListOrdersByNumbersRequest implements ModelInterface, ArrayAccess, \J
     /**
      * Sets numbers
      *
-     * @param string[]|null $numbers numbers
+     * @param string[] $numbers numbers
      *
      * @return self
      */

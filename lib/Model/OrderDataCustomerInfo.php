@@ -66,7 +66,11 @@ class OrderDataCustomerInfo implements ModelInterface, ArrayAccess, \JsonSeriali
         'segment' => 'string',
         'data' => 'string',
         'certified_email' => 'string',
-        'tax_code' => 'string'
+        'tax_code' => 'string',
+        'sdi_code' => 'string',
+        'fiscal_code' => 'string',
+        'company_name' => 'string',
+        'agent_grn' => 'string'
     ];
 
     /**
@@ -85,7 +89,11 @@ class OrderDataCustomerInfo implements ModelInterface, ArrayAccess, \JsonSeriali
         'segment' => null,
         'data' => null,
         'certified_email' => null,
-        'tax_code' => null
+        'tax_code' => null,
+        'sdi_code' => null,
+        'fiscal_code' => null,
+        'company_name' => null,
+        'agent_grn' => null
     ];
 
     /**
@@ -102,7 +110,11 @@ class OrderDataCustomerInfo implements ModelInterface, ArrayAccess, \JsonSeriali
         'segment' => false,
         'data' => false,
         'certified_email' => false,
-        'tax_code' => false
+        'tax_code' => false,
+        'sdi_code' => false,
+        'fiscal_code' => false,
+        'company_name' => false,
+        'agent_grn' => false
     ];
 
     /**
@@ -199,7 +211,11 @@ class OrderDataCustomerInfo implements ModelInterface, ArrayAccess, \JsonSeriali
         'segment' => 'segment',
         'data' => 'data',
         'certified_email' => 'certifiedEmail',
-        'tax_code' => 'taxCode'
+        'tax_code' => 'taxCode',
+        'sdi_code' => 'sdiCode',
+        'fiscal_code' => 'fiscalCode',
+        'company_name' => 'companyName',
+        'agent_grn' => 'agentGrn'
     ];
 
     /**
@@ -216,7 +232,11 @@ class OrderDataCustomerInfo implements ModelInterface, ArrayAccess, \JsonSeriali
         'segment' => 'setSegment',
         'data' => 'setData',
         'certified_email' => 'setCertifiedEmail',
-        'tax_code' => 'setTaxCode'
+        'tax_code' => 'setTaxCode',
+        'sdi_code' => 'setSdiCode',
+        'fiscal_code' => 'setFiscalCode',
+        'company_name' => 'setCompanyName',
+        'agent_grn' => 'setAgentGrn'
     ];
 
     /**
@@ -233,7 +253,11 @@ class OrderDataCustomerInfo implements ModelInterface, ArrayAccess, \JsonSeriali
         'segment' => 'getSegment',
         'data' => 'getData',
         'certified_email' => 'getCertifiedEmail',
-        'tax_code' => 'getTaxCode'
+        'tax_code' => 'getTaxCode',
+        'sdi_code' => 'getSdiCode',
+        'fiscal_code' => 'getFiscalCode',
+        'company_name' => 'getCompanyName',
+        'agent_grn' => 'getAgentGrn'
     ];
 
     /**
@@ -302,6 +326,10 @@ class OrderDataCustomerInfo implements ModelInterface, ArrayAccess, \JsonSeriali
         $this->setIfExists('data', $data ?? [], null);
         $this->setIfExists('certified_email', $data ?? [], null);
         $this->setIfExists('tax_code', $data ?? [], null);
+        $this->setIfExists('sdi_code', $data ?? [], null);
+        $this->setIfExists('fiscal_code', $data ?? [], null);
+        $this->setIfExists('company_name', $data ?? [], null);
+        $this->setIfExists('agent_grn', $data ?? [], null);
     }
 
     /**
@@ -331,6 +359,15 @@ class OrderDataCustomerInfo implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $invalidProperties = [];
 
+        if ($this->container['firstname'] === null) {
+            $invalidProperties[] = "'firstname' can't be null";
+        }
+        if ($this->container['lastname'] === null) {
+            $invalidProperties[] = "'lastname' can't be null";
+        }
+        if ($this->container['email'] === null) {
+            $invalidProperties[] = "'email' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -376,7 +413,7 @@ class OrderDataCustomerInfo implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets firstname
      *
-     * @return string|null
+     * @return string
      */
     public function getFirstname()
     {
@@ -386,7 +423,7 @@ class OrderDataCustomerInfo implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets firstname
      *
-     * @param string|null $firstname firstname
+     * @param string $firstname firstname
      *
      * @return self
      */
@@ -403,7 +440,7 @@ class OrderDataCustomerInfo implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets lastname
      *
-     * @return string|null
+     * @return string
      */
     public function getLastname()
     {
@@ -413,7 +450,7 @@ class OrderDataCustomerInfo implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets lastname
      *
-     * @param string|null $lastname lastname
+     * @param string $lastname lastname
      *
      * @return self
      */
@@ -430,7 +467,7 @@ class OrderDataCustomerInfo implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets email
      *
-     * @return string|null
+     * @return string
      */
     public function getEmail()
     {
@@ -440,7 +477,7 @@ class OrderDataCustomerInfo implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets email
      *
-     * @param string|null $email email
+     * @param string $email email
      *
      * @return self
      */
@@ -585,6 +622,114 @@ class OrderDataCustomerInfo implements ModelInterface, ArrayAccess, \JsonSeriali
             throw new \InvalidArgumentException('non-nullable tax_code cannot be null');
         }
         $this->container['tax_code'] = $tax_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets sdi_code
+     *
+     * @return string|null
+     */
+    public function getSdiCode()
+    {
+        return $this->container['sdi_code'];
+    }
+
+    /**
+     * Sets sdi_code
+     *
+     * @param string|null $sdi_code sdi_code
+     *
+     * @return self
+     */
+    public function setSdiCode($sdi_code)
+    {
+        if (is_null($sdi_code)) {
+            throw new \InvalidArgumentException('non-nullable sdi_code cannot be null');
+        }
+        $this->container['sdi_code'] = $sdi_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets fiscal_code
+     *
+     * @return string|null
+     */
+    public function getFiscalCode()
+    {
+        return $this->container['fiscal_code'];
+    }
+
+    /**
+     * Sets fiscal_code
+     *
+     * @param string|null $fiscal_code fiscal_code
+     *
+     * @return self
+     */
+    public function setFiscalCode($fiscal_code)
+    {
+        if (is_null($fiscal_code)) {
+            throw new \InvalidArgumentException('non-nullable fiscal_code cannot be null');
+        }
+        $this->container['fiscal_code'] = $fiscal_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets company_name
+     *
+     * @return string|null
+     */
+    public function getCompanyName()
+    {
+        return $this->container['company_name'];
+    }
+
+    /**
+     * Sets company_name
+     *
+     * @param string|null $company_name company_name
+     *
+     * @return self
+     */
+    public function setCompanyName($company_name)
+    {
+        if (is_null($company_name)) {
+            throw new \InvalidArgumentException('non-nullable company_name cannot be null');
+        }
+        $this->container['company_name'] = $company_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets agent_grn
+     *
+     * @return string|null
+     */
+    public function getAgentGrn()
+    {
+        return $this->container['agent_grn'];
+    }
+
+    /**
+     * Sets agent_grn
+     *
+     * @param string|null $agent_grn agent_grn
+     *
+     * @return self
+     */
+    public function setAgentGrn($agent_grn)
+    {
+        if (is_null($agent_grn)) {
+            throw new \InvalidArgumentException('non-nullable agent_grn cannot be null');
+        }
+        $this->container['agent_grn'] = $agent_grn;
 
         return $this;
     }

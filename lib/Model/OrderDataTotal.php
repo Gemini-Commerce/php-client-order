@@ -282,6 +282,12 @@ class OrderDataTotal implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
+        if ($this->container['code'] === null) {
+            $invalidProperties[] = "'code' can't be null";
+        }
+        if ($this->container['value'] === null) {
+            $invalidProperties[] = "'value' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -300,7 +306,7 @@ class OrderDataTotal implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets code
      *
-     * @return \GeminiCommerce\Order\Model\OrderDataTotalCode|null
+     * @return \GeminiCommerce\Order\Model\OrderDataTotalCode
      */
     public function getCode()
     {
@@ -310,7 +316,7 @@ class OrderDataTotal implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets code
      *
-     * @param \GeminiCommerce\Order\Model\OrderDataTotalCode|null $code code
+     * @param \GeminiCommerce\Order\Model\OrderDataTotalCode $code code
      *
      * @return self
      */
@@ -327,7 +333,7 @@ class OrderDataTotal implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets value
      *
-     * @return \GeminiCommerce\Order\Model\OrderMoney|null
+     * @return \GeminiCommerce\Order\Model\OrderMoney
      */
     public function getValue()
     {
@@ -337,7 +343,7 @@ class OrderDataTotal implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets value
      *
-     * @param \GeminiCommerce\Order\Model\OrderMoney|null $value value
+     * @param \GeminiCommerce\Order\Model\OrderMoney $value value
      *
      * @return self
      */

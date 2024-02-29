@@ -6,8 +6,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tenant_id**| **string** |   | [optional]
-**fulfillment_id**| **string** |   | [optional]
+**tenant_id**| **string** |   |
+**fulfillment_id**| **string** |   |
 **reason**| **string** |   | [optional]
 
 

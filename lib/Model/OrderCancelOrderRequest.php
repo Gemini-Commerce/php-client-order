@@ -289,6 +289,12 @@ class OrderCancelOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     {
         $invalidProperties = [];
 
+        if ($this->container['tenant_id'] === null) {
+            $invalidProperties[] = "'tenant_id' can't be null";
+        }
+        if ($this->container['order_id'] === null) {
+            $invalidProperties[] = "'order_id' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -307,7 +313,7 @@ class OrderCancelOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets tenant_id
      *
-     * @return string|null
+     * @return string
      */
     public function getTenantId()
     {
@@ -317,7 +323,7 @@ class OrderCancelOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets tenant_id
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string $tenant_id tenant_id
      *
      * @return self
      */
@@ -334,7 +340,7 @@ class OrderCancelOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets order_id
      *
-     * @return string|null
+     * @return string
      */
     public function getOrderId()
     {
@@ -344,7 +350,7 @@ class OrderCancelOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets order_id
      *
-     * @param string|null $order_id order_id
+     * @param string $order_id order_id
      *
      * @return self
      */

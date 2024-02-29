@@ -282,6 +282,12 @@ class OrderGetPaymentRequest implements ModelInterface, ArrayAccess, \JsonSerial
     {
         $invalidProperties = [];
 
+        if ($this->container['tenant_id'] === null) {
+            $invalidProperties[] = "'tenant_id' can't be null";
+        }
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -300,7 +306,7 @@ class OrderGetPaymentRequest implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets tenant_id
      *
-     * @return string|null
+     * @return string
      */
     public function getTenantId()
     {
@@ -310,7 +316,7 @@ class OrderGetPaymentRequest implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets tenant_id
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string $tenant_id tenant_id
      *
      * @return self
      */
@@ -327,7 +333,7 @@ class OrderGetPaymentRequest implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets id
      *
-     * @return string|null
+     * @return string
      */
     public function getId()
     {
@@ -337,7 +343,7 @@ class OrderGetPaymentRequest implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string $id id
      *
      * @return self
      */

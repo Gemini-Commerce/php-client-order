@@ -282,6 +282,12 @@ class OrderDataSubtotal implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         $invalidProperties = [];
 
+        if ($this->container['code'] === null) {
+            $invalidProperties[] = "'code' can't be null";
+        }
+        if ($this->container['value'] === null) {
+            $invalidProperties[] = "'value' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -300,7 +306,7 @@ class OrderDataSubtotal implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets code
      *
-     * @return \GeminiCommerce\Order\Model\OrderDataSubtotalCode|null
+     * @return \GeminiCommerce\Order\Model\OrderDataSubtotalCode
      */
     public function getCode()
     {
@@ -310,7 +316,7 @@ class OrderDataSubtotal implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets code
      *
-     * @param \GeminiCommerce\Order\Model\OrderDataSubtotalCode|null $code code
+     * @param \GeminiCommerce\Order\Model\OrderDataSubtotalCode $code code
      *
      * @return self
      */
@@ -327,7 +333,7 @@ class OrderDataSubtotal implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets value
      *
-     * @return \GeminiCommerce\Order\Model\OrderMoney|null
+     * @return \GeminiCommerce\Order\Model\OrderMoney
      */
     public function getValue()
     {
@@ -337,7 +343,7 @@ class OrderDataSubtotal implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets value
      *
-     * @param \GeminiCommerce\Order\Model\OrderMoney|null $value value
+     * @param \GeminiCommerce\Order\Model\OrderMoney $value value
      *
      * @return self
      */

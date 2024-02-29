@@ -282,6 +282,12 @@ class OrderReportFulfillmentReadyRequest implements ModelInterface, ArrayAccess,
     {
         $invalidProperties = [];
 
+        if ($this->container['tenant_id'] === null) {
+            $invalidProperties[] = "'tenant_id' can't be null";
+        }
+        if ($this->container['fulfillment_id'] === null) {
+            $invalidProperties[] = "'fulfillment_id' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -300,7 +306,7 @@ class OrderReportFulfillmentReadyRequest implements ModelInterface, ArrayAccess,
     /**
      * Gets tenant_id
      *
-     * @return string|null
+     * @return string
      */
     public function getTenantId()
     {
@@ -310,7 +316,7 @@ class OrderReportFulfillmentReadyRequest implements ModelInterface, ArrayAccess,
     /**
      * Sets tenant_id
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string $tenant_id tenant_id
      *
      * @return self
      */
@@ -327,7 +333,7 @@ class OrderReportFulfillmentReadyRequest implements ModelInterface, ArrayAccess,
     /**
      * Gets fulfillment_id
      *
-     * @return string|null
+     * @return string
      */
     public function getFulfillmentId()
     {
@@ -337,7 +343,7 @@ class OrderReportFulfillmentReadyRequest implements ModelInterface, ArrayAccess,
     /**
      * Sets fulfillment_id
      *
-     * @param string|null $fulfillment_id fulfillment_id
+     * @param string $fulfillment_id fulfillment_id
      *
      * @return self
      */

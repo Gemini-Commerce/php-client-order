@@ -19,6 +19,8 @@ Name | Type | Description | Notes
 **row_vat_amount**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   | [optional]
 **discount_amount**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   | [optional]
 **row_base_price**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   | [optional]
+**unit_custom_price**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   | [optional]
+**row_custom_price**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   | [optional]
 **vat_percentage**| **float** |   | [optional]
 **vat_inaccurate**| **bool** |   | [optional]
 **vat_calculated**| **bool** |   | [optional]
@@ -31,6 +33,7 @@ Name | Type | Description | Notes
 **shipment_info_reference**| **string** |   | [optional]
 **promotion_grn**| **string[]** |   | [optional]
 **product_is_virtual**| **bool** |   | [optional]
+**product_configuration**| [**\GeminiCommerce\Order\Model\ItemProductConfigurationStep[]**](ItemProductConfigurationStep.md) |   | [optional]
 
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

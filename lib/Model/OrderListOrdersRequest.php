@@ -303,6 +303,9 @@ class OrderListOrdersRequest implements ModelInterface, ArrayAccess, \JsonSerial
     {
         $invalidProperties = [];
 
+        if ($this->container['tenant_id'] === null) {
+            $invalidProperties[] = "'tenant_id' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -321,7 +324,7 @@ class OrderListOrdersRequest implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets tenant_id
      *
-     * @return string|null
+     * @return string
      */
     public function getTenantId()
     {
@@ -331,7 +334,7 @@ class OrderListOrdersRequest implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets tenant_id
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string $tenant_id tenant_id
      *
      * @return self
      */

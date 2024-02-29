@@ -115,4 +115,13 @@ class ImportOrderRequestImportedPaymentTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "is_upfront"
+     */
+    public function testPropertyIsUpfront()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

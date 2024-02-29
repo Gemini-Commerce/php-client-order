@@ -6,8 +6,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tenant_id**| **string** |   | [optional]
-**payment_id**| **string** |   | [optional]
+**tenant_id**| **string** |   |
+**payment_id**| **string** |   |
 **cc_info**| [**\GeminiCommerce\Order\Model\PaymentCcInfo**](PaymentCcInfo.md) |   | [optional]
 
 

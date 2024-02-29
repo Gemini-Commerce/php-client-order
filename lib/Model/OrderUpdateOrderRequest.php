@@ -61,7 +61,7 @@ class OrderUpdateOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
         'tenant_id' => 'string',
         'id' => 'string',
         'payload' => '\GeminiCommerce\Order\Model\UpdateOrderRequestPayload',
-        'field_mask' => 'string[]'
+        'field_mask' => 'string'
     ];
 
     /**
@@ -296,6 +296,12 @@ class OrderUpdateOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     {
         $invalidProperties = [];
 
+        if ($this->container['tenant_id'] === null) {
+            $invalidProperties[] = "'tenant_id' can't be null";
+        }
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -314,7 +320,7 @@ class OrderUpdateOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets tenant_id
      *
-     * @return string|null
+     * @return string
      */
     public function getTenantId()
     {
@@ -324,7 +330,7 @@ class OrderUpdateOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets tenant_id
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string $tenant_id tenant_id
      *
      * @return self
      */
@@ -341,7 +347,7 @@ class OrderUpdateOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets id
      *
-     * @return string|null
+     * @return string
      */
     public function getId()
     {
@@ -351,7 +357,7 @@ class OrderUpdateOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param string $id id
      *
      * @return self
      */
@@ -395,7 +401,7 @@ class OrderUpdateOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets field_mask
      *
-     * @return string[]|null
+     * @return string|null
      */
     public function getFieldMask()
     {
@@ -405,7 +411,7 @@ class OrderUpdateOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets field_mask
      *
-     * @param string[]|null $field_mask field_mask
+     * @param string|null $field_mask field_mask
      *
      * @return self
      */

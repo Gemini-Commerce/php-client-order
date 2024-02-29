@@ -58,8 +58,7 @@ class ProtobufAny implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'at_type' => 'string',
-        'value' => 'string'
+        'at_type' => 'string'
     ];
 
     /**
@@ -70,8 +69,7 @@ class ProtobufAny implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'at_type' => null,
-        'value' => 'byte'
+        'at_type' => null
     ];
 
     /**
@@ -80,8 +78,7 @@ class ProtobufAny implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'at_type' => false,
-        'value' => false
+        'at_type' => false
     ];
 
     /**
@@ -170,8 +167,7 @@ class ProtobufAny implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'at_type' => '@type',
-        'value' => 'value'
+        'at_type' => '@type'
     ];
 
     /**
@@ -180,8 +176,7 @@ class ProtobufAny implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'at_type' => 'setAtType',
-        'value' => 'setValue'
+        'at_type' => 'setAtType'
     ];
 
     /**
@@ -190,8 +185,7 @@ class ProtobufAny implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'at_type' => 'getAtType',
-        'value' => 'getValue'
+        'at_type' => 'getAtType'
     ];
 
     /**
@@ -252,7 +246,6 @@ class ProtobufAny implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('at_type', $data ?? [], null);
-        $this->setIfExists('value', $data ?? [], null);
     }
 
     /**
@@ -281,10 +274,6 @@ class ProtobufAny implements ModelInterface, ArrayAccess, \JsonSerializable
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        if (!is_null($this->container['value']) && !preg_match("/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/", $this->container['value'])) {
-            $invalidProperties[] = "invalid value for 'value', must be conform to the pattern /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/.";
-        }
 
         return $invalidProperties;
     }
@@ -324,38 +313,6 @@ class ProtobufAny implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable at_type cannot be null');
         }
         $this->container['at_type'] = $at_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets value
-     *
-     * @return string|null
-     */
-    public function getValue()
-    {
-        return $this->container['value'];
-    }
-
-    /**
-     * Sets value
-     *
-     * @param string|null $value value
-     *
-     * @return self
-     */
-    public function setValue($value)
-    {
-        if (is_null($value)) {
-            throw new \InvalidArgumentException('non-nullable value cannot be null');
-        }
-
-        if ((!preg_match("/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/", ObjectSerializer::toString($value)))) {
-            throw new \InvalidArgumentException("invalid value for \$value when calling ProtobufAny., must conform to the pattern /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/.");
-        }
-
-        $this->container['value'] = $value;
 
         return $this;
     }

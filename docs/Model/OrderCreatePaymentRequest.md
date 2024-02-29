@@ -6,11 +6,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tenant_id**| **string** |   | [optional]
-**order_id**| **string** |   | [optional]
-**code**| **string** |   | [optional]
+**tenant_id**| **string** |   |
+**order_id**| **string** |   |
+**code**| **string** |   |
 **additional_info**| **string** |   | [optional]
-**amount**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   | [optional]
+**amount**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   |
 **cc_info**| [**\GeminiCommerce\Order\Model\PaymentCcInfo**](PaymentCcInfo.md) |   | [optional]
 
 

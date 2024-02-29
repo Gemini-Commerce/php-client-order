@@ -296,6 +296,12 @@ class OrderCalculateRefundRequest implements ModelInterface, ArrayAccess, \JsonS
     {
         $invalidProperties = [];
 
+        if ($this->container['tenant_id'] === null) {
+            $invalidProperties[] = "'tenant_id' can't be null";
+        }
+        if ($this->container['payment_id'] === null) {
+            $invalidProperties[] = "'payment_id' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -314,7 +320,7 @@ class OrderCalculateRefundRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets tenant_id
      *
-     * @return string|null
+     * @return string
      */
     public function getTenantId()
     {
@@ -324,7 +330,7 @@ class OrderCalculateRefundRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets tenant_id
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string $tenant_id tenant_id
      *
      * @return self
      */
@@ -341,7 +347,7 @@ class OrderCalculateRefundRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets payment_id
      *
-     * @return string|null
+     * @return string
      */
     public function getPaymentId()
     {
@@ -351,7 +357,7 @@ class OrderCalculateRefundRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets payment_id
      *
-     * @param string|null $payment_id payment_id
+     * @param string $payment_id payment_id
      *
      * @return self
      */

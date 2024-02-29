@@ -6,9 +6,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**code**| **string** |   | [optional]
+**code**| **string** |   |
 **additional_info**| **string** |   | [optional]
-**amount**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   | [optional]
+**amount**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   |
 **fee**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   | [optional]
 **vat_amount**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   | [optional]
 **vat_percentage**| **float** |   | [optional]

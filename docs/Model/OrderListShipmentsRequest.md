@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tenant_id**| **string** |   | [optional]
+**tenant_id**| **string** |   |
 **order_id**| **string** |   | [optional]
 
 

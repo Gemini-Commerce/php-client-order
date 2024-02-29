@@ -289,6 +289,12 @@ class OrderCancelFulfillmentRequest implements ModelInterface, ArrayAccess, \Jso
     {
         $invalidProperties = [];
 
+        if ($this->container['tenant_id'] === null) {
+            $invalidProperties[] = "'tenant_id' can't be null";
+        }
+        if ($this->container['fulfillment_id'] === null) {
+            $invalidProperties[] = "'fulfillment_id' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -307,7 +313,7 @@ class OrderCancelFulfillmentRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets tenant_id
      *
-     * @return string|null
+     * @return string
      */
     public function getTenantId()
     {
@@ -317,7 +323,7 @@ class OrderCancelFulfillmentRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets tenant_id
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string $tenant_id tenant_id
      *
      * @return self
      */
@@ -334,7 +340,7 @@ class OrderCancelFulfillmentRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets fulfillment_id
      *
-     * @return string|null
+     * @return string
      */
     public function getFulfillmentId()
     {
@@ -344,7 +350,7 @@ class OrderCancelFulfillmentRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets fulfillment_id
      *
-     * @param string|null $fulfillment_id fulfillment_id
+     * @param string $fulfillment_id fulfillment_id
      *
      * @return self
      */

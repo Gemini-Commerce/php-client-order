@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 .php-cs-fixer.dist.php
 .travis.yml
 README.md
@@ -8,6 +7,9 @@ docs/Api/OrderApi.md
 docs/Model/CreateOrderRequestInitialPayment.md
 docs/Model/ImportOrderRequestImportedPayment.md
 docs/Model/InitialPaymentInitialTransaction.md
+docs/Model/ItemProductConfigurationStep.md
+docs/Model/OptionImage.md
+docs/Model/OrderAddDocumentRequest.md
 docs/Model/OrderApproveOrderRequest.md
 docs/Model/OrderAssignShipmentRequest.md
 docs/Model/OrderByDirection.md
@@ -27,6 +29,7 @@ docs/Model/OrderCreateRefundTransactionRequest.md
 docs/Model/OrderCreateShipmentRequest.md
 docs/Model/OrderCurrency.md
 docs/Model/OrderDataCustomerInfo.md
+docs/Model/OrderDataDocument.md
 docs/Model/OrderDataHistory.md
 docs/Model/OrderDataPaymentInfo.md
 docs/Model/OrderDataPromotionInfo.md
@@ -77,6 +80,7 @@ docs/Model/OrderRefund.md
 docs/Model/OrderRefundAmount.md
 docs/Model/OrderRefundAmountCode.md
 docs/Model/OrderRefundItem.md
+docs/Model/OrderRemoveDocumentByCodeRequest.md
 docs/Model/OrderReportFulfillmentErrorRequest.md
 docs/Model/OrderReportFulfillmentNotResolvableRequest.md
 docs/Model/OrderReportFulfillmentReadyRequest.md
@@ -101,6 +105,7 @@ docs/Model/OrderUpdateOrderRequest.md
 docs/Model/OrderUpdatePaymentRequest.md
 docs/Model/PaymentCcInfo.md
 docs/Model/PrintOrdersLabelsResponseFailedOrder.md
+docs/Model/ProductConfigurationStepOption.md
 docs/Model/ProtobufAny.md
 docs/Model/ProtobufNullValue.md
 docs/Model/RpcStatus.md
@@ -114,7 +119,10 @@ lib/HeaderSelector.php
 lib/Model/CreateOrderRequestInitialPayment.php
 lib/Model/ImportOrderRequestImportedPayment.php
 lib/Model/InitialPaymentInitialTransaction.php
+lib/Model/ItemProductConfigurationStep.php
 lib/Model/ModelInterface.php
+lib/Model/OptionImage.php
+lib/Model/OrderAddDocumentRequest.php
 lib/Model/OrderApproveOrderRequest.php
 lib/Model/OrderAssignShipmentRequest.php
 lib/Model/OrderByDirection.php
@@ -134,6 +142,7 @@ lib/Model/OrderCreateRefundTransactionRequest.php
 lib/Model/OrderCreateShipmentRequest.php
 lib/Model/OrderCurrency.php
 lib/Model/OrderDataCustomerInfo.php
+lib/Model/OrderDataDocument.php
 lib/Model/OrderDataHistory.php
 lib/Model/OrderDataPaymentInfo.php
 lib/Model/OrderDataPromotionInfo.php
@@ -184,6 +193,7 @@ lib/Model/OrderRefund.php
 lib/Model/OrderRefundAmount.php
 lib/Model/OrderRefundAmountCode.php
 lib/Model/OrderRefundItem.php
+lib/Model/OrderRemoveDocumentByCodeRequest.php
 lib/Model/OrderReportFulfillmentErrorRequest.php
 lib/Model/OrderReportFulfillmentNotResolvableRequest.php
 lib/Model/OrderReportFulfillmentReadyRequest.php
@@ -208,6 +218,7 @@ lib/Model/OrderUpdateOrderRequest.php
 lib/Model/OrderUpdatePaymentRequest.php
 lib/Model/PaymentCcInfo.php
 lib/Model/PrintOrdersLabelsResponseFailedOrder.php
+lib/Model/ProductConfigurationStepOption.php
 lib/Model/ProtobufAny.php
 lib/Model/ProtobufNullValue.php
 lib/Model/RpcStatus.php
@@ -219,6 +230,9 @@ test/Api/OrderApiTest.php
 test/Model/CreateOrderRequestInitialPaymentTest.php
 test/Model/ImportOrderRequestImportedPaymentTest.php
 test/Model/InitialPaymentInitialTransactionTest.php
+test/Model/ItemProductConfigurationStepTest.php
+test/Model/OptionImageTest.php
+test/Model/OrderAddDocumentRequestTest.php
 test/Model/OrderApproveOrderRequestTest.php
 test/Model/OrderAssignShipmentRequestTest.php
 test/Model/OrderByDirectionTest.php
@@ -238,6 +252,7 @@ test/Model/OrderCreateRefundTransactionRequestTest.php
 test/Model/OrderCreateShipmentRequestTest.php
 test/Model/OrderCurrencyTest.php
 test/Model/OrderDataCustomerInfoTest.php
+test/Model/OrderDataDocumentTest.php
 test/Model/OrderDataHistoryTest.php
 test/Model/OrderDataPaymentInfoTest.php
 test/Model/OrderDataPromotionInfoTest.php
@@ -288,6 +303,7 @@ test/Model/OrderRefundAmountCodeTest.php
 test/Model/OrderRefundAmountTest.php
 test/Model/OrderRefundItemTest.php
 test/Model/OrderRefundTest.php
+test/Model/OrderRemoveDocumentByCodeRequestTest.php
 test/Model/OrderReportFulfillmentErrorRequestTest.php
 test/Model/OrderReportFulfillmentNotResolvableRequestTest.php
 test/Model/OrderReportFulfillmentReadyRequestTest.php
@@ -312,6 +328,7 @@ test/Model/OrderUpdateOrderRequestTest.php
 test/Model/OrderUpdatePaymentRequestTest.php
 test/Model/PaymentCcInfoTest.php
 test/Model/PrintOrdersLabelsResponseFailedOrderTest.php
+test/Model/ProductConfigurationStepOptionTest.php
 test/Model/ProtobufAnyTest.php
 test/Model/ProtobufNullValueTest.php
 test/Model/RpcStatusTest.php

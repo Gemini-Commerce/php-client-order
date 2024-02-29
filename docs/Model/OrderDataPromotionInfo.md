@@ -7,11 +7,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **promotion_grn**| **string** |   | [optional]
-**type**| **string** |   | [optional]
+**type**| **string** |   |
 **additional_info**| **string** |   | [optional]
-**name**| **string** |   | [optional]
+**name**| **string** |   |
 **description**| **string** |   | [optional]
-**amount**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   | [optional]
+**amount**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   |
 **coupon_code**| **string** |   | [optional]
 **vat_amount**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   | [optional]
 **vat_percentage**| **float** |   | [optional]

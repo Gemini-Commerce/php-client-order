@@ -387,6 +387,51 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     {
         $invalidProperties = [];
 
+        if ($this->container['tenant_id'] === null) {
+            $invalidProperties[] = "'tenant_id' can't be null";
+        }
+        if ($this->container['number'] === null) {
+            $invalidProperties[] = "'number' can't be null";
+        }
+        if ($this->container['market'] === null) {
+            $invalidProperties[] = "'market' can't be null";
+        }
+        if ($this->container['locale'] === null) {
+            $invalidProperties[] = "'locale' can't be null";
+        }
+        if ($this->container['customer_info'] === null) {
+            $invalidProperties[] = "'customer_info' can't be null";
+        }
+        if ($this->container['shipping_address'] === null) {
+            $invalidProperties[] = "'shipping_address' can't be null";
+        }
+        if ($this->container['billing_address'] === null) {
+            $invalidProperties[] = "'billing_address' can't be null";
+        }
+        if ($this->container['payments'] === null) {
+            $invalidProperties[] = "'payments' can't be null";
+        }
+        if ($this->container['payments_info'] === null) {
+            $invalidProperties[] = "'payments_info' can't be null";
+        }
+        if ($this->container['shipments_info'] === null) {
+            $invalidProperties[] = "'shipments_info' can't be null";
+        }
+        if ($this->container['items'] === null) {
+            $invalidProperties[] = "'items' can't be null";
+        }
+        if ($this->container['subtotals'] === null) {
+            $invalidProperties[] = "'subtotals' can't be null";
+        }
+        if ($this->container['totals'] === null) {
+            $invalidProperties[] = "'totals' can't be null";
+        }
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
+        }
+        if ($this->container['currency'] === null) {
+            $invalidProperties[] = "'currency' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -405,7 +450,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets tenant_id
      *
-     * @return string|null
+     * @return string
      */
     public function getTenantId()
     {
@@ -415,7 +460,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets tenant_id
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string $tenant_id tenant_id
      *
      * @return self
      */
@@ -459,7 +504,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets number
      *
-     * @return string|null
+     * @return string
      */
     public function getNumber()
     {
@@ -469,7 +514,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets number
      *
-     * @param string|null $number number
+     * @param string $number number
      *
      * @return self
      */
@@ -513,7 +558,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets market
      *
-     * @return string|null
+     * @return string
      */
     public function getMarket()
     {
@@ -523,7 +568,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets market
      *
-     * @param string|null $market market
+     * @param string $market market
      *
      * @return self
      */
@@ -540,7 +585,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets locale
      *
-     * @return string|null
+     * @return string
      */
     public function getLocale()
     {
@@ -550,7 +595,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets locale
      *
-     * @param string|null $locale locale
+     * @param string $locale locale
      *
      * @return self
      */
@@ -567,7 +612,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets customer_info
      *
-     * @return \GeminiCommerce\Order\Model\OrderDataCustomerInfo|null
+     * @return \GeminiCommerce\Order\Model\OrderDataCustomerInfo
      */
     public function getCustomerInfo()
     {
@@ -577,7 +622,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets customer_info
      *
-     * @param \GeminiCommerce\Order\Model\OrderDataCustomerInfo|null $customer_info customer_info
+     * @param \GeminiCommerce\Order\Model\OrderDataCustomerInfo $customer_info customer_info
      *
      * @return self
      */
@@ -594,7 +639,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets shipping_address
      *
-     * @return \GeminiCommerce\Order\Model\OrderPostalAddress|null
+     * @return \GeminiCommerce\Order\Model\OrderPostalAddress
      */
     public function getShippingAddress()
     {
@@ -604,7 +649,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets shipping_address
      *
-     * @param \GeminiCommerce\Order\Model\OrderPostalAddress|null $shipping_address shipping_address
+     * @param \GeminiCommerce\Order\Model\OrderPostalAddress $shipping_address shipping_address
      *
      * @return self
      */
@@ -621,7 +666,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets billing_address
      *
-     * @return \GeminiCommerce\Order\Model\OrderPostalAddress|null
+     * @return \GeminiCommerce\Order\Model\OrderPostalAddress
      */
     public function getBillingAddress()
     {
@@ -631,7 +676,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets billing_address
      *
-     * @param \GeminiCommerce\Order\Model\OrderPostalAddress|null $billing_address billing_address
+     * @param \GeminiCommerce\Order\Model\OrderPostalAddress $billing_address billing_address
      *
      * @return self
      */
@@ -648,7 +693,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets payments
      *
-     * @return \GeminiCommerce\Order\Model\ImportOrderRequestImportedPayment[]|null
+     * @return \GeminiCommerce\Order\Model\ImportOrderRequestImportedPayment[]
      */
     public function getPayments()
     {
@@ -658,7 +703,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets payments
      *
-     * @param \GeminiCommerce\Order\Model\ImportOrderRequestImportedPayment[]|null $payments payments
+     * @param \GeminiCommerce\Order\Model\ImportOrderRequestImportedPayment[] $payments payments
      *
      * @return self
      */
@@ -675,7 +720,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets payments_info
      *
-     * @return \GeminiCommerce\Order\Model\OrderDataPaymentInfo[]|null
+     * @return \GeminiCommerce\Order\Model\OrderDataPaymentInfo[]
      */
     public function getPaymentsInfo()
     {
@@ -685,7 +730,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets payments_info
      *
-     * @param \GeminiCommerce\Order\Model\OrderDataPaymentInfo[]|null $payments_info payments_info
+     * @param \GeminiCommerce\Order\Model\OrderDataPaymentInfo[] $payments_info payments_info
      *
      * @return self
      */
@@ -702,7 +747,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets shipments_info
      *
-     * @return \GeminiCommerce\Order\Model\OrderDataShipmentInfo[]|null
+     * @return \GeminiCommerce\Order\Model\OrderDataShipmentInfo[]
      */
     public function getShipmentsInfo()
     {
@@ -712,7 +757,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets shipments_info
      *
-     * @param \GeminiCommerce\Order\Model\OrderDataShipmentInfo[]|null $shipments_info shipments_info
+     * @param \GeminiCommerce\Order\Model\OrderDataShipmentInfo[] $shipments_info shipments_info
      *
      * @return self
      */
@@ -729,7 +774,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets items
      *
-     * @return \GeminiCommerce\Order\Model\OrderOrderDataItem[]|null
+     * @return \GeminiCommerce\Order\Model\OrderOrderDataItem[]
      */
     public function getItems()
     {
@@ -739,7 +784,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets items
      *
-     * @param \GeminiCommerce\Order\Model\OrderOrderDataItem[]|null $items items
+     * @param \GeminiCommerce\Order\Model\OrderOrderDataItem[] $items items
      *
      * @return self
      */
@@ -756,7 +801,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets subtotals
      *
-     * @return array<string,\GeminiCommerce\Order\Model\OrderDataSubtotal>|null
+     * @return array<string,\GeminiCommerce\Order\Model\OrderDataSubtotal>
      */
     public function getSubtotals()
     {
@@ -766,7 +811,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets subtotals
      *
-     * @param array<string,\GeminiCommerce\Order\Model\OrderDataSubtotal>|null $subtotals subtotals
+     * @param array<string,\GeminiCommerce\Order\Model\OrderDataSubtotal> $subtotals subtotals
      *
      * @return self
      */
@@ -783,7 +828,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets totals
      *
-     * @return array<string,\GeminiCommerce\Order\Model\OrderDataTotal>|null
+     * @return array<string,\GeminiCommerce\Order\Model\OrderDataTotal>
      */
     public function getTotals()
     {
@@ -793,7 +838,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets totals
      *
-     * @param array<string,\GeminiCommerce\Order\Model\OrderDataTotal>|null $totals totals
+     * @param array<string,\GeminiCommerce\Order\Model\OrderDataTotal> $totals totals
      *
      * @return self
      */
@@ -810,7 +855,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets status
      *
-     * @return string|null
+     * @return string
      */
     public function getStatus()
     {
@@ -820,7 +865,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets status
      *
-     * @param string|null $status status
+     * @param string $status status
      *
      * @return self
      */
@@ -837,7 +882,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets currency
      *
-     * @return \GeminiCommerce\Order\Model\OrderCurrency|null
+     * @return \GeminiCommerce\Order\Model\OrderCurrency
      */
     public function getCurrency()
     {
@@ -847,7 +892,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets currency
      *
-     * @param \GeminiCommerce\Order\Model\OrderCurrency|null $currency currency
+     * @param \GeminiCommerce\Order\Model\OrderCurrency $currency currency
      *
      * @return self
      */

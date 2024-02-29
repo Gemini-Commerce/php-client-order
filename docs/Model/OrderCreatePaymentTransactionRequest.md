@@ -6,9 +6,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tenant_id**| **string** |   | [optional]
-**payment_id**| **string** |   | [optional]
-**type**| [**\GeminiCommerce\Order\Model\OrderTransactionType**](OrderTransactionType.md) |  for more information please, see Model/OrderTransactionType.php  | [optional]
+**tenant_id**| **string** |   |
+**payment_id**| **string** |   |
+**type**| [**\GeminiCommerce\Order\Model\OrderTransactionType**](OrderTransactionType.md) |  for more information please, see Model/OrderTransactionType.php  |
 **additional_info**| **string** |   | [optional]
 
 

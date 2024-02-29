@@ -303,6 +303,12 @@ class CreateOrderRequestInitialPayment implements ModelInterface, ArrayAccess, \
     {
         $invalidProperties = [];
 
+        if ($this->container['code'] === null) {
+            $invalidProperties[] = "'code' can't be null";
+        }
+        if ($this->container['amount'] === null) {
+            $invalidProperties[] = "'amount' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -321,7 +327,7 @@ class CreateOrderRequestInitialPayment implements ModelInterface, ArrayAccess, \
     /**
      * Gets code
      *
-     * @return string|null
+     * @return string
      */
     public function getCode()
     {
@@ -331,7 +337,7 @@ class CreateOrderRequestInitialPayment implements ModelInterface, ArrayAccess, \
     /**
      * Sets code
      *
-     * @param string|null $code code
+     * @param string $code code
      *
      * @return self
      */
@@ -375,7 +381,7 @@ class CreateOrderRequestInitialPayment implements ModelInterface, ArrayAccess, \
     /**
      * Gets amount
      *
-     * @return \GeminiCommerce\Order\Model\OrderMoney|null
+     * @return \GeminiCommerce\Order\Model\OrderMoney
      */
     public function getAmount()
     {
@@ -385,7 +391,7 @@ class CreateOrderRequestInitialPayment implements ModelInterface, ArrayAccess, \
     /**
      * Sets amount
      *
-     * @param \GeminiCommerce\Order\Model\OrderMoney|null $amount amount
+     * @param \GeminiCommerce\Order\Model\OrderMoney $amount amount
      *
      * @return self
      */

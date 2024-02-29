@@ -345,6 +345,15 @@ class OrderDataPromotionInfo implements ModelInterface, ArrayAccess, \JsonSerial
     {
         $invalidProperties = [];
 
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['amount'] === null) {
+            $invalidProperties[] = "'amount' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -390,7 +399,7 @@ class OrderDataPromotionInfo implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets type
      *
-     * @return string|null
+     * @return string
      */
     public function getType()
     {
@@ -400,7 +409,7 @@ class OrderDataPromotionInfo implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets type
      *
-     * @param string|null $type type
+     * @param string $type type
      *
      * @return self
      */
@@ -444,7 +453,7 @@ class OrderDataPromotionInfo implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets name
      *
-     * @return string|null
+     * @return string
      */
     public function getName()
     {
@@ -454,7 +463,7 @@ class OrderDataPromotionInfo implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets name
      *
-     * @param string|null $name name
+     * @param string $name name
      *
      * @return self
      */
@@ -498,7 +507,7 @@ class OrderDataPromotionInfo implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets amount
      *
-     * @return \GeminiCommerce\Order\Model\OrderMoney|null
+     * @return \GeminiCommerce\Order\Model\OrderMoney
      */
     public function getAmount()
     {
@@ -508,7 +517,7 @@ class OrderDataPromotionInfo implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets amount
      *
-     * @param \GeminiCommerce\Order\Model\OrderMoney|null $amount amount
+     * @param \GeminiCommerce\Order\Model\OrderMoney $amount amount
      *
      * @return self
      */

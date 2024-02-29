@@ -6,12 +6,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**reference**| **string** |   | [optional]
-**code**| **string** |   | [optional]
+**reference**| **string** |   |
+**code**| **string** |   |
 **method**| **string** |   | [optional]
 **title**| **string** |   | [optional]
 **additional_info**| **string** |   | [optional]
-**amount**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   | [optional]
+**amount**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   |
 **fee**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   | [optional]
 **vat_amount**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   | [optional]
 **vat_percentage**| **float** |   | [optional]

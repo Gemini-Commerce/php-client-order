@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type**| [**\GeminiCommerce\Order\Model\OrderTransactionType**](OrderTransactionType.md) |  for more information please, see Model/OrderTransactionType.php  | [optional]
+**type**| [**\GeminiCommerce\Order\Model\OrderTransactionType**](OrderTransactionType.md) |  for more information please, see Model/OrderTransactionType.php  |
 **additional_info**| **string** |   | [optional]
 
 

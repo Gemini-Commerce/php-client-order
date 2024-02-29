@@ -433,6 +433,30 @@ class OrderApiTest extends TestCase
     }
 
     /**
+     * Test case for orderAddDocument
+     *
+     * Documents.
+     *
+     */
+    public function testOrderAddDocument()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for orderRemoveDocumentByCode
+     *
+     * .
+     *
+     */
+    public function testOrderRemoveDocumentByCode()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for printOrdersLabels
      *
      * Print Orders Labels.

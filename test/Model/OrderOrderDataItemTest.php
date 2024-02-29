@@ -198,6 +198,24 @@ class OrderOrderDataItemTest extends TestCase
     }
 
     /**
+     * Test attribute "unit_custom_price"
+     */
+    public function testPropertyUnitCustomPrice()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "row_custom_price"
+     */
+    public function testPropertyRowCustomPrice()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "vat_percentage"
      */
     public function testPropertyVatPercentage()
@@ -300,6 +318,15 @@ class OrderOrderDataItemTest extends TestCase
      * Test attribute "product_is_virtual"
      */
     public function testPropertyProductIsVirtual()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "product_configuration"
+     */
+    public function testPropertyProductConfiguration()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

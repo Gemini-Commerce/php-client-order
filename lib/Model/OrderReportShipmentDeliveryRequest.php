@@ -282,6 +282,12 @@ class OrderReportShipmentDeliveryRequest implements ModelInterface, ArrayAccess,
     {
         $invalidProperties = [];
 
+        if ($this->container['tenant_id'] === null) {
+            $invalidProperties[] = "'tenant_id' can't be null";
+        }
+        if ($this->container['shipment_id'] === null) {
+            $invalidProperties[] = "'shipment_id' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -300,7 +306,7 @@ class OrderReportShipmentDeliveryRequest implements ModelInterface, ArrayAccess,
     /**
      * Gets tenant_id
      *
-     * @return string|null
+     * @return string
      */
     public function getTenantId()
     {
@@ -310,7 +316,7 @@ class OrderReportShipmentDeliveryRequest implements ModelInterface, ArrayAccess,
     /**
      * Sets tenant_id
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string $tenant_id tenant_id
      *
      * @return self
      */
@@ -327,7 +333,7 @@ class OrderReportShipmentDeliveryRequest implements ModelInterface, ArrayAccess,
     /**
      * Gets shipment_id
      *
-     * @return string|null
+     * @return string
      */
     public function getShipmentId()
     {
@@ -337,7 +343,7 @@ class OrderReportShipmentDeliveryRequest implements ModelInterface, ArrayAccess,
     /**
      * Sets shipment_id
      *
-     * @param string|null $shipment_id shipment_id
+     * @param string $shipment_id shipment_id
      *
      * @return self
      */

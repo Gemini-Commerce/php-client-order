@@ -64,6 +64,8 @@ class OrderCreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSe
         'address' => '\GeminiCommerce\Order\Model\OrderPostalAddress',
         'from_address' => '\GeminiCommerce\Order\Model\OrderPostalAddress',
         'return_address' => '\GeminiCommerce\Order\Model\OrderPostalAddress',
+        'tracking' => '\GeminiCommerce\Order\Model\ShipmentTracking[]',
+        'return_tracking' => '\GeminiCommerce\Order\Model\ShipmentTracking[]',
         'code' => 'string',
         'method' => 'string'
     ];
@@ -82,6 +84,8 @@ class OrderCreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSe
         'address' => null,
         'from_address' => null,
         'return_address' => null,
+        'tracking' => null,
+        'return_tracking' => null,
         'code' => null,
         'method' => null
     ];
@@ -98,6 +102,8 @@ class OrderCreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSe
         'address' => false,
         'from_address' => false,
         'return_address' => false,
+        'tracking' => false,
+        'return_tracking' => false,
         'code' => false,
         'method' => false
     ];
@@ -194,6 +200,8 @@ class OrderCreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSe
         'address' => 'address',
         'from_address' => 'fromAddress',
         'return_address' => 'returnAddress',
+        'tracking' => 'tracking',
+        'return_tracking' => 'returnTracking',
         'code' => 'code',
         'method' => 'method'
     ];
@@ -210,6 +218,8 @@ class OrderCreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSe
         'address' => 'setAddress',
         'from_address' => 'setFromAddress',
         'return_address' => 'setReturnAddress',
+        'tracking' => 'setTracking',
+        'return_tracking' => 'setReturnTracking',
         'code' => 'setCode',
         'method' => 'setMethod'
     ];
@@ -226,6 +236,8 @@ class OrderCreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSe
         'address' => 'getAddress',
         'from_address' => 'getFromAddress',
         'return_address' => 'getReturnAddress',
+        'tracking' => 'getTracking',
+        'return_tracking' => 'getReturnTracking',
         'code' => 'getCode',
         'method' => 'getMethod'
     ];
@@ -293,6 +305,8 @@ class OrderCreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSe
         $this->setIfExists('address', $data ?? [], null);
         $this->setIfExists('from_address', $data ?? [], null);
         $this->setIfExists('return_address', $data ?? [], null);
+        $this->setIfExists('tracking', $data ?? [], null);
+        $this->setIfExists('return_tracking', $data ?? [], null);
         $this->setIfExists('code', $data ?? [], null);
         $this->setIfExists('method', $data ?? [], null);
     }
@@ -324,6 +338,18 @@ class OrderCreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSe
     {
         $invalidProperties = [];
 
+        if ($this->container['tenant_id'] === null) {
+            $invalidProperties[] = "'tenant_id' can't be null";
+        }
+        if ($this->container['order_id'] === null) {
+            $invalidProperties[] = "'order_id' can't be null";
+        }
+        if ($this->container['items'] === null) {
+            $invalidProperties[] = "'items' can't be null";
+        }
+        if ($this->container['address'] === null) {
+            $invalidProperties[] = "'address' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -342,7 +368,7 @@ class OrderCreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets tenant_id
      *
-     * @return string|null
+     * @return string
      */
     public function getTenantId()
     {
@@ -352,7 +378,7 @@ class OrderCreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets tenant_id
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string $tenant_id tenant_id
      *
      * @return self
      */
@@ -369,7 +395,7 @@ class OrderCreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets order_id
      *
-     * @return string|null
+     * @return string
      */
     public function getOrderId()
     {
@@ -379,7 +405,7 @@ class OrderCreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets order_id
      *
-     * @param string|null $order_id order_id
+     * @param string $order_id order_id
      *
      * @return self
      */
@@ -396,7 +422,7 @@ class OrderCreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets items
      *
-     * @return \GeminiCommerce\Order\Model\OrderShipmentItem[]|null
+     * @return \GeminiCommerce\Order\Model\OrderShipmentItem[]
      */
     public function getItems()
     {
@@ -406,7 +432,7 @@ class OrderCreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets items
      *
-     * @param \GeminiCommerce\Order\Model\OrderShipmentItem[]|null $items items
+     * @param \GeminiCommerce\Order\Model\OrderShipmentItem[] $items items
      *
      * @return self
      */
@@ -423,7 +449,7 @@ class OrderCreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets address
      *
-     * @return \GeminiCommerce\Order\Model\OrderPostalAddress|null
+     * @return \GeminiCommerce\Order\Model\OrderPostalAddress
      */
     public function getAddress()
     {
@@ -433,7 +459,7 @@ class OrderCreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets address
      *
-     * @param \GeminiCommerce\Order\Model\OrderPostalAddress|null $address address
+     * @param \GeminiCommerce\Order\Model\OrderPostalAddress $address address
      *
      * @return self
      */
@@ -497,6 +523,60 @@ class OrderCreateShipmentRequest implements ModelInterface, ArrayAccess, \JsonSe
             throw new \InvalidArgumentException('non-nullable return_address cannot be null');
         }
         $this->container['return_address'] = $return_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets tracking
+     *
+     * @return \GeminiCommerce\Order\Model\ShipmentTracking[]|null
+     */
+    public function getTracking()
+    {
+        return $this->container['tracking'];
+    }
+
+    /**
+     * Sets tracking
+     *
+     * @param \GeminiCommerce\Order\Model\ShipmentTracking[]|null $tracking tracking
+     *
+     * @return self
+     */
+    public function setTracking($tracking)
+    {
+        if (is_null($tracking)) {
+            throw new \InvalidArgumentException('non-nullable tracking cannot be null');
+        }
+        $this->container['tracking'] = $tracking;
+
+        return $this;
+    }
+
+    /**
+     * Gets return_tracking
+     *
+     * @return \GeminiCommerce\Order\Model\ShipmentTracking[]|null
+     */
+    public function getReturnTracking()
+    {
+        return $this->container['return_tracking'];
+    }
+
+    /**
+     * Sets return_tracking
+     *
+     * @param \GeminiCommerce\Order\Model\ShipmentTracking[]|null $return_tracking return_tracking
+     *
+     * @return self
+     */
+    public function setReturnTracking($return_tracking)
+    {
+        if (is_null($return_tracking)) {
+            throw new \InvalidArgumentException('non-nullable return_tracking cannot be null');
+        }
+        $this->container['return_tracking'] = $return_tracking;
 
         return $this;
     }

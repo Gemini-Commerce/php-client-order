@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**created_at**| **\DateTime** |   | [optional]
+**created_at**| **\DateTime** |   | [optional] [readonly]
 **payment_id**| **string** |   | [optional]
 **id**| **string** |   | [optional]
 **items**| [**\GeminiCommerce\Order\Model\OrderRefundItem[]**](OrderRefundItem.md) |   | [optional]

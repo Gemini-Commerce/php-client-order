@@ -88,13 +88,4 @@ class ProtobufAnyTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test attribute "value"
-     */
-    public function testPropertyValue()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
 }

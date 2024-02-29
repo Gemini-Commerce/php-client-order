@@ -310,6 +310,18 @@ class OrderCreatePaymentRequest implements ModelInterface, ArrayAccess, \JsonSer
     {
         $invalidProperties = [];
 
+        if ($this->container['tenant_id'] === null) {
+            $invalidProperties[] = "'tenant_id' can't be null";
+        }
+        if ($this->container['order_id'] === null) {
+            $invalidProperties[] = "'order_id' can't be null";
+        }
+        if ($this->container['code'] === null) {
+            $invalidProperties[] = "'code' can't be null";
+        }
+        if ($this->container['amount'] === null) {
+            $invalidProperties[] = "'amount' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -328,7 +340,7 @@ class OrderCreatePaymentRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets tenant_id
      *
-     * @return string|null
+     * @return string
      */
     public function getTenantId()
     {
@@ -338,7 +350,7 @@ class OrderCreatePaymentRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets tenant_id
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string $tenant_id tenant_id
      *
      * @return self
      */
@@ -355,7 +367,7 @@ class OrderCreatePaymentRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets order_id
      *
-     * @return string|null
+     * @return string
      */
     public function getOrderId()
     {
@@ -365,7 +377,7 @@ class OrderCreatePaymentRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets order_id
      *
-     * @param string|null $order_id order_id
+     * @param string $order_id order_id
      *
      * @return self
      */
@@ -382,7 +394,7 @@ class OrderCreatePaymentRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets code
      *
-     * @return string|null
+     * @return string
      */
     public function getCode()
     {
@@ -392,7 +404,7 @@ class OrderCreatePaymentRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets code
      *
-     * @param string|null $code code
+     * @param string $code code
      *
      * @return self
      */
@@ -436,7 +448,7 @@ class OrderCreatePaymentRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets amount
      *
-     * @return \GeminiCommerce\Order\Model\OrderMoney|null
+     * @return \GeminiCommerce\Order\Model\OrderMoney
      */
     public function getAmount()
     {
@@ -446,7 +458,7 @@ class OrderCreatePaymentRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets amount
      *
-     * @param \GeminiCommerce\Order\Model\OrderMoney|null $amount amount
+     * @param \GeminiCommerce\Order\Model\OrderMoney $amount amount
      *
      * @return self
      */

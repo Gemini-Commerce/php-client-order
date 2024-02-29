@@ -6,10 +6,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tenant_id**| **string** |   | [optional]
-**payment_id**| **string** |   | [optional]
+**tenant_id**| **string** |   |
+**payment_id**| **string** |   |
 **items**| [**\GeminiCommerce\Order\Model\OrderRefundItem[]**](OrderRefundItem.md) |   | [optional]
-**amounts**| [**\GeminiCommerce\Order\Model\OrderRefundAmount[]**](OrderRefundAmount.md) |   | [optional]
+**amounts**| [**\GeminiCommerce\Order\Model\OrderRefundAmount[]**](OrderRefundAmount.md) |   |
 **note**| **string** |   | [optional]
 **additional_info**| **string** |   | [optional]
 

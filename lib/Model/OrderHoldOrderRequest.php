@@ -289,6 +289,9 @@ class OrderHoldOrderRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $invalidProperties = [];
 
+        if ($this->container['order_id'] === null) {
+            $invalidProperties[] = "'order_id' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -334,7 +337,7 @@ class OrderHoldOrderRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets order_id
      *
-     * @return string|null
+     * @return string
      */
     public function getOrderId()
     {
@@ -344,7 +347,7 @@ class OrderHoldOrderRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets order_id
      *
-     * @param string|null $order_id order_id
+     * @param string $order_id order_id
      *
      * @return self
      */

@@ -541,7 +541,7 @@ class PaymentCcInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets type
      *
-     * @param string|null $type type
+     * @param string|null $type card type MasterCard, Visa..
      *
      * @return self
      */

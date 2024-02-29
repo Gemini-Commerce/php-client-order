@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **number_enc**| **string** |   | [optional]
 **owner**| **string** |   | [optional]
 **avs_status**| **string** |   | [optional]
-**type**| **string** |   | [optional]
+**type**| **string** | card type MasterCard, Visa..  | [optional]
 
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

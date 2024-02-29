@@ -399,7 +399,7 @@ class OrderPayment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets code
      *
-     * @param string|null $code code
+     * @param string|null $code payment type stripe, paypal..
      *
      * @return self
      */

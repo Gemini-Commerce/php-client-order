@@ -366,6 +366,15 @@ class OrderDataShipmentInfo implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $invalidProperties = [];
 
+        if ($this->container['reference'] === null) {
+            $invalidProperties[] = "'reference' can't be null";
+        }
+        if ($this->container['code'] === null) {
+            $invalidProperties[] = "'code' can't be null";
+        }
+        if ($this->container['amount'] === null) {
+            $invalidProperties[] = "'amount' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -384,7 +393,7 @@ class OrderDataShipmentInfo implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets reference
      *
-     * @return string|null
+     * @return string
      */
     public function getReference()
     {
@@ -394,7 +403,7 @@ class OrderDataShipmentInfo implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets reference
      *
-     * @param string|null $reference reference
+     * @param string $reference reference
      *
      * @return self
      */
@@ -411,7 +420,7 @@ class OrderDataShipmentInfo implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets code
      *
-     * @return string|null
+     * @return string
      */
     public function getCode()
     {
@@ -421,7 +430,7 @@ class OrderDataShipmentInfo implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets code
      *
-     * @param string|null $code code
+     * @param string $code code
      *
      * @return self
      */
@@ -519,7 +528,7 @@ class OrderDataShipmentInfo implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets amount
      *
-     * @return \GeminiCommerce\Order\Model\OrderMoney|null
+     * @return \GeminiCommerce\Order\Model\OrderMoney
      */
     public function getAmount()
     {
@@ -529,7 +538,7 @@ class OrderDataShipmentInfo implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets amount
      *
-     * @param \GeminiCommerce\Order\Model\OrderMoney|null $amount amount
+     * @param \GeminiCommerce\Order\Model\OrderMoney $amount amount
      *
      * @return self
      */

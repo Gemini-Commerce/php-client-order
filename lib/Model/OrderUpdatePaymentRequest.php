@@ -289,6 +289,12 @@ class OrderUpdatePaymentRequest implements ModelInterface, ArrayAccess, \JsonSer
     {
         $invalidProperties = [];
 
+        if ($this->container['tenant_id'] === null) {
+            $invalidProperties[] = "'tenant_id' can't be null";
+        }
+        if ($this->container['payment_id'] === null) {
+            $invalidProperties[] = "'payment_id' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -307,7 +313,7 @@ class OrderUpdatePaymentRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets tenant_id
      *
-     * @return string|null
+     * @return string
      */
     public function getTenantId()
     {
@@ -317,7 +323,7 @@ class OrderUpdatePaymentRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets tenant_id
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string $tenant_id tenant_id
      *
      * @return self
      */
@@ -334,7 +340,7 @@ class OrderUpdatePaymentRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets payment_id
      *
-     * @return string|null
+     * @return string
      */
     public function getPaymentId()
     {
@@ -344,7 +350,7 @@ class OrderUpdatePaymentRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets payment_id
      *
-     * @param string|null $payment_id payment_id
+     * @param string $payment_id payment_id
      *
      * @return self
      */

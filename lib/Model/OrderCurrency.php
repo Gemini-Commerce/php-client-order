@@ -34,6 +34,7 @@ use \GeminiCommerce\Order\ObjectSerializer;
  * OrderCurrency Class Doc Comment
  *
  * @category Class
+ * @description Stands for Albania, not all ;-)
  * @package  GeminiCommerce\Order
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

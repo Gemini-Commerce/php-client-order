@@ -61,7 +61,8 @@ class OrderListOrdersByCustomerRequest implements ModelInterface, ArrayAccess, \
         'tenant_id' => 'string',
         'customer_grn' => 'string',
         'page_size' => 'int',
-        'page_token' => 'string'
+        'page_token' => 'string',
+        'order_by' => '\GeminiCommerce\Order\Model\OrderOrderBy[]'
     ];
 
     /**
@@ -75,7 +76,8 @@ class OrderListOrdersByCustomerRequest implements ModelInterface, ArrayAccess, \
         'tenant_id' => null,
         'customer_grn' => null,
         'page_size' => 'int64',
-        'page_token' => null
+        'page_token' => null,
+        'order_by' => null
     ];
 
     /**
@@ -87,7 +89,8 @@ class OrderListOrdersByCustomerRequest implements ModelInterface, ArrayAccess, \
         'tenant_id' => false,
         'customer_grn' => false,
         'page_size' => false,
-        'page_token' => false
+        'page_token' => false,
+        'order_by' => false
     ];
 
     /**
@@ -179,7 +182,8 @@ class OrderListOrdersByCustomerRequest implements ModelInterface, ArrayAccess, \
         'tenant_id' => 'tenantId',
         'customer_grn' => 'customerGrn',
         'page_size' => 'pageSize',
-        'page_token' => 'pageToken'
+        'page_token' => 'pageToken',
+        'order_by' => 'orderBy'
     ];
 
     /**
@@ -191,7 +195,8 @@ class OrderListOrdersByCustomerRequest implements ModelInterface, ArrayAccess, \
         'tenant_id' => 'setTenantId',
         'customer_grn' => 'setCustomerGrn',
         'page_size' => 'setPageSize',
-        'page_token' => 'setPageToken'
+        'page_token' => 'setPageToken',
+        'order_by' => 'setOrderBy'
     ];
 
     /**
@@ -203,7 +208,8 @@ class OrderListOrdersByCustomerRequest implements ModelInterface, ArrayAccess, \
         'tenant_id' => 'getTenantId',
         'customer_grn' => 'getCustomerGrn',
         'page_size' => 'getPageSize',
-        'page_token' => 'getPageToken'
+        'page_token' => 'getPageToken',
+        'order_by' => 'getOrderBy'
     ];
 
     /**
@@ -267,6 +273,7 @@ class OrderListOrdersByCustomerRequest implements ModelInterface, ArrayAccess, \
         $this->setIfExists('customer_grn', $data ?? [], null);
         $this->setIfExists('page_size', $data ?? [], null);
         $this->setIfExists('page_token', $data ?? [], null);
+        $this->setIfExists('order_by', $data ?? [], null);
     }
 
     /**
@@ -296,6 +303,12 @@ class OrderListOrdersByCustomerRequest implements ModelInterface, ArrayAccess, \
     {
         $invalidProperties = [];
 
+        if ($this->container['tenant_id'] === null) {
+            $invalidProperties[] = "'tenant_id' can't be null";
+        }
+        if ($this->container['customer_grn'] === null) {
+            $invalidProperties[] = "'customer_grn' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -314,7 +327,7 @@ class OrderListOrdersByCustomerRequest implements ModelInterface, ArrayAccess, \
     /**
      * Gets tenant_id
      *
-     * @return string|null
+     * @return string
      */
     public function getTenantId()
     {
@@ -324,7 +337,7 @@ class OrderListOrdersByCustomerRequest implements ModelInterface, ArrayAccess, \
     /**
      * Sets tenant_id
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string $tenant_id tenant_id
      *
      * @return self
      */
@@ -341,7 +354,7 @@ class OrderListOrdersByCustomerRequest implements ModelInterface, ArrayAccess, \
     /**
      * Gets customer_grn
      *
-     * @return string|null
+     * @return string
      */
     public function getCustomerGrn()
     {
@@ -351,7 +364,7 @@ class OrderListOrdersByCustomerRequest implements ModelInterface, ArrayAccess, \
     /**
      * Sets customer_grn
      *
-     * @param string|null $customer_grn customer_grn
+     * @param string $customer_grn customer_grn
      *
      * @return self
      */
@@ -415,6 +428,33 @@ class OrderListOrdersByCustomerRequest implements ModelInterface, ArrayAccess, \
             throw new \InvalidArgumentException('non-nullable page_token cannot be null');
         }
         $this->container['page_token'] = $page_token;
+
+        return $this;
+    }
+
+    /**
+     * Gets order_by
+     *
+     * @return \GeminiCommerce\Order\Model\OrderOrderBy[]|null
+     */
+    public function getOrderBy()
+    {
+        return $this->container['order_by'];
+    }
+
+    /**
+     * Sets order_by
+     *
+     * @param \GeminiCommerce\Order\Model\OrderOrderBy[]|null $order_by order_by
+     *
+     * @return self
+     */
+    public function setOrderBy($order_by)
+    {
+        if (is_null($order_by)) {
+            throw new \InvalidArgumentException('non-nullable order_by cannot be null');
+        }
+        $this->container['order_by'] = $order_by;
 
         return $this;
     }

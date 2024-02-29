@@ -310,6 +310,15 @@ class OrderCreateRefundRequest implements ModelInterface, ArrayAccess, \JsonSeri
     {
         $invalidProperties = [];
 
+        if ($this->container['tenant_id'] === null) {
+            $invalidProperties[] = "'tenant_id' can't be null";
+        }
+        if ($this->container['payment_id'] === null) {
+            $invalidProperties[] = "'payment_id' can't be null";
+        }
+        if ($this->container['amounts'] === null) {
+            $invalidProperties[] = "'amounts' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -328,7 +337,7 @@ class OrderCreateRefundRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets tenant_id
      *
-     * @return string|null
+     * @return string
      */
     public function getTenantId()
     {
@@ -338,7 +347,7 @@ class OrderCreateRefundRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets tenant_id
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string $tenant_id tenant_id
      *
      * @return self
      */
@@ -355,7 +364,7 @@ class OrderCreateRefundRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets payment_id
      *
-     * @return string|null
+     * @return string
      */
     public function getPaymentId()
     {
@@ -365,7 +374,7 @@ class OrderCreateRefundRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets payment_id
      *
-     * @param string|null $payment_id payment_id
+     * @param string $payment_id payment_id
      *
      * @return self
      */
@@ -409,7 +418,7 @@ class OrderCreateRefundRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets amounts
      *
-     * @return \GeminiCommerce\Order\Model\OrderRefundAmount[]|null
+     * @return \GeminiCommerce\Order\Model\OrderRefundAmount[]
      */
     public function getAmounts()
     {
@@ -419,7 +428,7 @@ class OrderCreateRefundRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets amounts
      *
-     * @param \GeminiCommerce\Order\Model\OrderRefundAmount[]|null $amounts amounts
+     * @param \GeminiCommerce\Order\Model\OrderRefundAmount[] $amounts amounts
      *
      * @return self
      */

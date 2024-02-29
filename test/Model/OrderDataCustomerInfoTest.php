@@ -160,4 +160,40 @@ class OrderDataCustomerInfoTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "sdi_code"
+     */
+    public function testPropertySdiCode()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "fiscal_code"
+     */
+    public function testPropertyFiscalCode()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "company_name"
+     */
+    public function testPropertyCompanyName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "agent_grn"
+     */
+    public function testPropertyAgentGrn()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

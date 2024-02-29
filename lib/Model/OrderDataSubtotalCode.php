@@ -34,6 +34,7 @@ use \GeminiCommerce\Order\ObjectSerializer;
  * OrderDataSubtotalCode Class Doc Comment
  *
  * @category Class
+ * @description - ITEMS: gross discount items amount.  - ITEMS_DISCOUNTED: discounted items amount.  - DISCOUNT: discount amount. It is a NEGATIVE amount.
  * @package  GeminiCommerce\Order
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

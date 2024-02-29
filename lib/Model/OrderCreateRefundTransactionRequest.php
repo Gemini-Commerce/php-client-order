@@ -303,6 +303,12 @@ class OrderCreateRefundTransactionRequest implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['tenant_id'] === null) {
+            $invalidProperties[] = "'tenant_id' can't be null";
+        }
+        if ($this->container['refund_id'] === null) {
+            $invalidProperties[] = "'refund_id' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -321,7 +327,7 @@ class OrderCreateRefundTransactionRequest implements ModelInterface, ArrayAccess
     /**
      * Gets tenant_id
      *
-     * @return string|null
+     * @return string
      */
     public function getTenantId()
     {
@@ -331,7 +337,7 @@ class OrderCreateRefundTransactionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets tenant_id
      *
-     * @param string|null $tenant_id tenant_id
+     * @param string $tenant_id tenant_id
      *
      * @return self
      */
@@ -348,7 +354,7 @@ class OrderCreateRefundTransactionRequest implements ModelInterface, ArrayAccess
     /**
      * Gets refund_id
      *
-     * @return string|null
+     * @return string
      */
     public function getRefundId()
     {
@@ -358,7 +364,7 @@ class OrderCreateRefundTransactionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets refund_id
      *
-     * @param string|null $refund_id refund_id
+     * @param string $refund_id refund_id
      *
      * @return self
      */

@@ -68,6 +68,7 @@ class OrderOrderData implements ModelInterface, ArrayAccess, \JsonSerializable
         'market' => 'string',
         'locale' => 'string',
         'additional_info' => 'object',
+        'documents' => '\GeminiCommerce\Order\Model\OrderDataDocument[]',
         'items' => '\GeminiCommerce\Order\Model\OrderOrderDataItem[]',
         'payments' => '\GeminiCommerce\Order\Model\OrderPayment[]',
         'shipments' => '\GeminiCommerce\Order\Model\OrderShipment[]',
@@ -109,6 +110,7 @@ class OrderOrderData implements ModelInterface, ArrayAccess, \JsonSerializable
         'market' => null,
         'locale' => null,
         'additional_info' => null,
+        'documents' => null,
         'items' => null,
         'payments' => null,
         'shipments' => null,
@@ -148,6 +150,7 @@ class OrderOrderData implements ModelInterface, ArrayAccess, \JsonSerializable
         'market' => false,
         'locale' => false,
         'additional_info' => false,
+        'documents' => false,
         'items' => false,
         'payments' => false,
         'shipments' => false,
@@ -267,6 +270,7 @@ class OrderOrderData implements ModelInterface, ArrayAccess, \JsonSerializable
         'market' => 'market',
         'locale' => 'locale',
         'additional_info' => 'additionalInfo',
+        'documents' => 'documents',
         'items' => 'items',
         'payments' => 'payments',
         'shipments' => 'shipments',
@@ -306,6 +310,7 @@ class OrderOrderData implements ModelInterface, ArrayAccess, \JsonSerializable
         'market' => 'setMarket',
         'locale' => 'setLocale',
         'additional_info' => 'setAdditionalInfo',
+        'documents' => 'setDocuments',
         'items' => 'setItems',
         'payments' => 'setPayments',
         'shipments' => 'setShipments',
@@ -345,6 +350,7 @@ class OrderOrderData implements ModelInterface, ArrayAccess, \JsonSerializable
         'market' => 'getMarket',
         'locale' => 'getLocale',
         'additional_info' => 'getAdditionalInfo',
+        'documents' => 'getDocuments',
         'items' => 'getItems',
         'payments' => 'getPayments',
         'shipments' => 'getShipments',
@@ -435,6 +441,7 @@ class OrderOrderData implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('market', $data ?? [], null);
         $this->setIfExists('locale', $data ?? [], null);
         $this->setIfExists('additional_info', $data ?? [], null);
+        $this->setIfExists('documents', $data ?? [], null);
         $this->setIfExists('items', $data ?? [], null);
         $this->setIfExists('payments', $data ?? [], null);
         $this->setIfExists('shipments', $data ?? [], null);
@@ -485,6 +492,9 @@ class OrderOrderData implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
+        if ($this->container['locale'] === null) {
+            $invalidProperties[] = "'locale' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -719,7 +729,7 @@ class OrderOrderData implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets locale
      *
-     * @return string|null
+     * @return string
      */
     public function getLocale()
     {
@@ -729,7 +739,7 @@ class OrderOrderData implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets locale
      *
-     * @param string|null $locale locale
+     * @param string $locale locale
      *
      * @return self
      */
@@ -766,6 +776,33 @@ class OrderOrderData implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable additional_info cannot be null');
         }
         $this->container['additional_info'] = $additional_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets documents
+     *
+     * @return \GeminiCommerce\Order\Model\OrderDataDocument[]|null
+     */
+    public function getDocuments()
+    {
+        return $this->container['documents'];
+    }
+
+    /**
+     * Sets documents
+     *
+     * @param \GeminiCommerce\Order\Model\OrderDataDocument[]|null $documents documents
+     *
+     * @return self
+     */
+    public function setDocuments($documents)
+    {
+        if (is_null($documents)) {
+            throw new \InvalidArgumentException('non-nullable documents cannot be null');
+        }
+        $this->container['documents'] = $documents;
 
         return $this;
     }

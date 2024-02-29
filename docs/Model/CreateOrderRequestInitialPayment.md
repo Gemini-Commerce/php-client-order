@@ -6,9 +6,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**code**| **string** |   | [optional]
+**code**| **string** |   |
 **additional_info**| **string** |   | [optional]
-**amount**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   | [optional]
+**amount**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   |
 **cc_info**| [**\GeminiCommerce\Order\Model\PaymentCcInfo**](PaymentCcInfo.md) |   | [optional]
 **transaction**| [**\GeminiCommerce\Order\Model\InitialPaymentInitialTransaction**](InitialPaymentInitialTransaction.md) |   | [optional]
 
