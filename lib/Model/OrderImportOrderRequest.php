@@ -45,6 +45,8 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
 {
     public const DISCRIMINATOR = null;
 
+    protected static $withAdditionalProperties = false;
+
     /**
       * The original name of the model.
       *
@@ -74,7 +76,8 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
         'subtotals' => 'array<string,\GeminiCommerce\Order\Model\OrderDataSubtotal>',
         'totals' => 'array<string,\GeminiCommerce\Order\Model\OrderDataTotal>',
         'status' => 'string',
-        'currency' => '\GeminiCommerce\Order\Model\OrderCurrency'
+        'currency' => '\GeminiCommerce\Order\Model\OrderCurrency',
+        'vat_included' => 'bool'
     ];
 
     /**
@@ -101,7 +104,8 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
         'subtotals' => null,
         'totals' => null,
         'status' => null,
-        'currency' => null
+        'currency' => null,
+        'vat_included' => null
     ];
 
     /**
@@ -126,7 +130,8 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
         'subtotals' => false,
         'totals' => false,
         'status' => false,
-        'currency' => false
+        'currency' => false,
+        'vat_included' => false
     ];
 
     /**
@@ -231,7 +236,8 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
         'subtotals' => 'subtotals',
         'totals' => 'totals',
         'status' => 'status',
-        'currency' => 'currency'
+        'currency' => 'currency',
+        'vat_included' => 'vatIncluded'
     ];
 
     /**
@@ -256,7 +262,8 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
         'subtotals' => 'setSubtotals',
         'totals' => 'setTotals',
         'status' => 'setStatus',
-        'currency' => 'setCurrency'
+        'currency' => 'setCurrency',
+        'vat_included' => 'setVatIncluded'
     ];
 
     /**
@@ -281,7 +288,8 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
         'subtotals' => 'getSubtotals',
         'totals' => 'getTotals',
         'status' => 'getStatus',
-        'currency' => 'getCurrency'
+        'currency' => 'getCurrency',
+        'vat_included' => 'getVatIncluded'
     ];
 
     /**
@@ -334,6 +342,13 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     protected $container = [];
 
     /**
+     * Associative array for storing additional properties
+     *
+     * @var mixed[]
+     */
+    protected $additionalProperties = [];
+
+    /**
      * Constructor
      *
      * @param mixed[] $data Associated array of property values
@@ -358,6 +373,7 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
         $this->setIfExists('totals', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], null);
         $this->setIfExists('currency', $data ?? [], null);
+        $this->setIfExists('vat_included', $data ?? [], null);
     }
 
     /**
@@ -905,6 +921,33 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
 
         return $this;
     }
+
+    /**
+     * Gets vat_included
+     *
+     * @return bool|null
+     */
+    public function getVatIncluded()
+    {
+        return $this->container['vat_included'];
+    }
+
+    /**
+     * Sets vat_included
+     *
+     * @param bool|null $vat_included vat_included
+     *
+     * @return self
+     */
+    public function setVatIncluded($vat_included)
+    {
+        if (is_null($vat_included)) {
+            throw new \InvalidArgumentException('non-nullable vat_included cannot be null');
+        }
+        $this->container['vat_included'] = $vat_included;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      *
@@ -993,6 +1036,36 @@ class OrderImportOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     public function toHeaderValue()
     {
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
+    }
+
+    public static function withAdditionalProperties(): bool
+    {
+        return self::$withAdditionalProperties;
+    }
+
+
+    public function setAdditionalProperty($name, $value)
+    {
+        throw new \InvalidArgumentException(
+            sprintf(
+                "This model cannot have additional properties"
+            )
+        );
+    }
+
+    public function getAdditionalProperty($name)
+    {
+        return $this->additionalProperties[$name];
+    }
+
+    public function hasAdditionalProperty($name): bool
+    {
+        return array_key_exists($name, $this->additionalProperties);
+    }
+
+    public function getAdditionalProperties()
+    {
+        return $this->additionalProperties;
     }
 }
 

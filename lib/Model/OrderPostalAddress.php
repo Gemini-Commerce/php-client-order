@@ -46,6 +46,8 @@ class OrderPostalAddress implements ModelInterface, ArrayAccess, \JsonSerializab
 {
     public const DISCRIMINATOR = null;
 
+    protected static $withAdditionalProperties = false;
+
     /**
       * The original name of the model.
       *
@@ -309,6 +311,13 @@ class OrderPostalAddress implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var mixed[]
      */
     protected $container = [];
+
+    /**
+     * Associative array for storing additional properties
+     *
+     * @var mixed[]
+     */
+    protected $additionalProperties = [];
 
     /**
      * Constructor
@@ -813,6 +822,36 @@ class OrderPostalAddress implements ModelInterface, ArrayAccess, \JsonSerializab
     public function toHeaderValue()
     {
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
+    }
+
+    public static function withAdditionalProperties(): bool
+    {
+        return self::$withAdditionalProperties;
+    }
+
+
+    public function setAdditionalProperty($name, $value)
+    {
+        throw new \InvalidArgumentException(
+            sprintf(
+                "This model cannot have additional properties"
+            )
+        );
+    }
+
+    public function getAdditionalProperty($name)
+    {
+        return $this->additionalProperties[$name];
+    }
+
+    public function hasAdditionalProperty($name): bool
+    {
+        return array_key_exists($name, $this->additionalProperties);
+    }
+
+    public function getAdditionalProperties()
+    {
+        return $this->additionalProperties;
     }
 }
 

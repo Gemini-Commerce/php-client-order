@@ -103,6 +103,11 @@ class ObjectSerializer
                         $values[$data::attributeMap()[$property]] = self::sanitizeForSerialization($value, $openAPIType, $formats[$property]);
                     }
                 }
+                if ($data->withAdditionalProperties()) {
+                    foreach ($data->getAdditionalProperties() as $additionalProperty => $additionalValue) {
+                        $values[$additionalProperty] = $additionalValue;
+                    }
+                }
             } else {
                 foreach($data as $property => $value) {
                     $values[$property] = self::sanitizeForSerialization($value);
@@ -474,7 +479,7 @@ class ObjectSerializer
             // determine file name
             if (
                 is_array($httpHeaders)
-                && array_key_exists('Content-Disposition', $httpHeaders) 
+                && array_key_exists('Content-Disposition', $httpHeaders)
                 && preg_match('/inline; filename=[\'"]?([^\'"\s]+)[\'"]?$/i', $httpHeaders['Content-Disposition'], $match)
             ) {
                 $filename = Configuration::getDefaultConfiguration()->getTempFolderPath() . DIRECTORY_SEPARATOR . self::sanitizeFilename($match[1]);
@@ -522,6 +527,7 @@ class ObjectSerializer
 
             /** @var ModelInterface $instance */
             $instance = new $class();
+            $alreadySet = [];
             foreach ($instance::openAPITypes() as $property => $type) {
                 $propertySetter = $instance::setters()[$property];
 
@@ -538,8 +544,17 @@ class ObjectSerializer
                 }
 
                 if (isset($data->{$instance::attributeMap()[$property]})) {
-                    $propertyValue = $data->{$instance::attributeMap()[$property]};
+                    $propertyName = $instance::attributeMap()[$property];
+                    $propertyValue = $data->{$propertyName};
+                    $alreadySet[$propertyName] = true;
                     $instance->$propertySetter(self::deserialize($propertyValue, $type, null));
+                }
+            }
+            if ($instance->withAdditionalProperties()) {
+                foreach($data as $additionalKey => $additionalValue) {
+                    if (!array_key_exists($additionalKey, $alreadySet)) {
+                        $instance->setAdditionalProperty($additionalKey, $additionalValue);
+                    }
                 }
             }
             return $instance;

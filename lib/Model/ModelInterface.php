@@ -109,4 +109,9 @@ interface ModelInterface
      * @return bool
      */
     public function isNullableSetToNull(string $property): bool;
+
+    public static function withAdditionalProperties(): bool;
+    public function getAdditionalProperties();
+    public function getAdditionalProperty($name);
+    public function hasAdditionalProperty($name): bool;
 }

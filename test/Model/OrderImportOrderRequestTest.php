@@ -232,4 +232,13 @@ class OrderImportOrderRequestTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "vat_included"
+     */
+    public function testPropertyVatIncluded()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

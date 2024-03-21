@@ -1,7 +1,7 @@
 # # OrderImportOrderRequest
 
 
-## Properties
+## Properties 
 
 
 Name | Type | Description | Notes
@@ -23,6 +23,8 @@ Name | Type | Description | Notes
 **totals**| [**array<string,\GeminiCommerce\Order\Model\OrderDataTotal>**](OrderDataTotal.md) |   |
 **status**| **string** |   |
 **currency**| [**\GeminiCommerce\Order\Model\OrderCurrency**](OrderCurrency.md) |  for more information please, see Model/OrderCurrency.php  |
+**vat_included**| **bool** |   | [optional]
 
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
+
