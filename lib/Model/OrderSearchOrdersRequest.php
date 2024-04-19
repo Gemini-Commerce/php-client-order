@@ -69,7 +69,9 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
         'from_date' => '\DateTime',
         'to_date' => '\DateTime',
         'payment_filter' => '\GeminiCommerce\Order\Model\OrderPaymentFilter',
-        'agent_grn' => 'string'
+        'agent_grn' => 'string',
+        'updated_from' => '\DateTime',
+        'updated_to' => '\DateTime'
     ];
 
     /**
@@ -89,7 +91,9 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
         'from_date' => 'date-time',
         'to_date' => 'date-time',
         'payment_filter' => null,
-        'agent_grn' => null
+        'agent_grn' => null,
+        'updated_from' => 'date-time',
+        'updated_to' => 'date-time'
     ];
 
     /**
@@ -107,7 +111,9 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
         'from_date' => false,
         'to_date' => false,
         'payment_filter' => false,
-        'agent_grn' => false
+        'agent_grn' => false,
+        'updated_from' => false,
+        'updated_to' => false
     ];
 
     /**
@@ -205,7 +211,9 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
         'from_date' => 'fromDate',
         'to_date' => 'toDate',
         'payment_filter' => 'paymentFilter',
-        'agent_grn' => 'agentGrn'
+        'agent_grn' => 'agentGrn',
+        'updated_from' => 'updatedFrom',
+        'updated_to' => 'updatedTo'
     ];
 
     /**
@@ -223,7 +231,9 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
         'from_date' => 'setFromDate',
         'to_date' => 'setToDate',
         'payment_filter' => 'setPaymentFilter',
-        'agent_grn' => 'setAgentGrn'
+        'agent_grn' => 'setAgentGrn',
+        'updated_from' => 'setUpdatedFrom',
+        'updated_to' => 'setUpdatedTo'
     ];
 
     /**
@@ -241,7 +251,9 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
         'from_date' => 'getFromDate',
         'to_date' => 'getToDate',
         'payment_filter' => 'getPaymentFilter',
-        'agent_grn' => 'getAgentGrn'
+        'agent_grn' => 'getAgentGrn',
+        'updated_from' => 'getUpdatedFrom',
+        'updated_to' => 'getUpdatedTo'
     ];
 
     /**
@@ -318,6 +330,8 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
         $this->setIfExists('to_date', $data ?? [], null);
         $this->setIfExists('payment_filter', $data ?? [], null);
         $this->setIfExists('agent_grn', $data ?? [], null);
+        $this->setIfExists('updated_from', $data ?? [], null);
+        $this->setIfExists('updated_to', $data ?? [], null);
     }
 
     /**
@@ -631,6 +645,60 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
             throw new \InvalidArgumentException('non-nullable agent_grn cannot be null');
         }
         $this->container['agent_grn'] = $agent_grn;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_from
+     *
+     * @return \DateTime|null
+     */
+    public function getUpdatedFrom()
+    {
+        return $this->container['updated_from'];
+    }
+
+    /**
+     * Sets updated_from
+     *
+     * @param \DateTime|null $updated_from updated_from
+     *
+     * @return self
+     */
+    public function setUpdatedFrom($updated_from)
+    {
+        if (is_null($updated_from)) {
+            throw new \InvalidArgumentException('non-nullable updated_from cannot be null');
+        }
+        $this->container['updated_from'] = $updated_from;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_to
+     *
+     * @return \DateTime|null
+     */
+    public function getUpdatedTo()
+    {
+        return $this->container['updated_to'];
+    }
+
+    /**
+     * Sets updated_to
+     *
+     * @param \DateTime|null $updated_to updated_to
+     *
+     * @return self
+     */
+    public function setUpdatedTo($updated_to)
+    {
+        if (is_null($updated_to)) {
+            throw new \InvalidArgumentException('non-nullable updated_to cannot be null');
+        }
+        $this->container['updated_to'] = $updated_to;
 
         return $this;
     }
