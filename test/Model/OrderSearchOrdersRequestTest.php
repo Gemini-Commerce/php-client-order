@@ -171,18 +171,18 @@ class OrderSearchOrdersRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "updated_from"
+     * Test attribute "updated_at_from"
      */
-    public function testPropertyUpdatedFrom()
+    public function testPropertyUpdatedAtFrom()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "updated_to"
+     * Test attribute "updated_at_to"
      */
-    public function testPropertyUpdatedTo()
+    public function testPropertyUpdatedAtTo()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -16,8 +16,8 @@ Name | Type | Description | Notes
 **to_date**| **\DateTime** |   | [optional]
 **payment_filter**| [**\GeminiCommerce\Order\Model\OrderPaymentFilter**](OrderPaymentFilter.md) |   | [optional]
 **agent_grn**| **string** |   | [optional]
-**updated_from**| **\DateTime** |   | [optional]
-**updated_to**| **\DateTime** |   | [optional]
+**updated_at_from**| **\DateTime** |   | [optional]
+**updated_at_to**| **\DateTime** |   | [optional]
 
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
