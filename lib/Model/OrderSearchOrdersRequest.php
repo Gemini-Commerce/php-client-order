@@ -71,7 +71,8 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
         'payment_filter' => '\GeminiCommerce\Order\Model\OrderPaymentFilter',
         'agent_grn' => 'string',
         'updated_at_from' => '\DateTime',
-        'updated_at_to' => '\DateTime'
+        'updated_at_to' => '\DateTime',
+        'on_hold' => 'bool'
     ];
 
     /**
@@ -93,7 +94,8 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
         'payment_filter' => null,
         'agent_grn' => null,
         'updated_at_from' => 'date-time',
-        'updated_at_to' => 'date-time'
+        'updated_at_to' => 'date-time',
+        'on_hold' => null
     ];
 
     /**
@@ -113,7 +115,8 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
         'payment_filter' => false,
         'agent_grn' => false,
         'updated_at_from' => false,
-        'updated_at_to' => false
+        'updated_at_to' => false,
+        'on_hold' => false
     ];
 
     /**
@@ -213,7 +216,8 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
         'payment_filter' => 'paymentFilter',
         'agent_grn' => 'agentGrn',
         'updated_at_from' => 'updatedAtFrom',
-        'updated_at_to' => 'updatedAtTo'
+        'updated_at_to' => 'updatedAtTo',
+        'on_hold' => 'onHold'
     ];
 
     /**
@@ -233,7 +237,8 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
         'payment_filter' => 'setPaymentFilter',
         'agent_grn' => 'setAgentGrn',
         'updated_at_from' => 'setUpdatedAtFrom',
-        'updated_at_to' => 'setUpdatedAtTo'
+        'updated_at_to' => 'setUpdatedAtTo',
+        'on_hold' => 'setOnHold'
     ];
 
     /**
@@ -253,7 +258,8 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
         'payment_filter' => 'getPaymentFilter',
         'agent_grn' => 'getAgentGrn',
         'updated_at_from' => 'getUpdatedAtFrom',
-        'updated_at_to' => 'getUpdatedAtTo'
+        'updated_at_to' => 'getUpdatedAtTo',
+        'on_hold' => 'getOnHold'
     ];
 
     /**
@@ -332,6 +338,7 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
         $this->setIfExists('agent_grn', $data ?? [], null);
         $this->setIfExists('updated_at_from', $data ?? [], null);
         $this->setIfExists('updated_at_to', $data ?? [], null);
+        $this->setIfExists('on_hold', $data ?? [], null);
     }
 
     /**
@@ -699,6 +706,33 @@ class OrderSearchOrdersRequest implements ModelInterface, ArrayAccess, \JsonSeri
             throw new \InvalidArgumentException('non-nullable updated_at_to cannot be null');
         }
         $this->container['updated_at_to'] = $updated_at_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets on_hold
+     *
+     * @return bool|null
+     */
+    public function getOnHold()
+    {
+        return $this->container['on_hold'];
+    }
+
+    /**
+     * Sets on_hold
+     *
+     * @param bool|null $on_hold on_hold
+     *
+     * @return self
+     */
+    public function setOnHold($on_hold)
+    {
+        if (is_null($on_hold)) {
+            throw new \InvalidArgumentException('non-nullable on_hold cannot be null');
+        }
+        $this->container['on_hold'] = $on_hold;
 
         return $this;
     }
