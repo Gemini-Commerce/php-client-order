@@ -236,8 +236,3 @@ lib/Model/ShipmentTracking.php
 lib/Model/UpdateOrderRequestPayload.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Model/BehaviorOptionsInventoryActionTest.php
-test/Model/BehaviorOptionsInventoryTest.php
-test/Model/BehaviorOptionsPaymentActionTest.php
-test/Model/CancelOrderRequestBehaviorOptionsPaymentTest.php
-test/Model/CancelOrderRequestBehaviorOptionsTest.php
