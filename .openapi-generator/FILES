@@ -4,6 +4,11 @@
 README.md
 composer.json
 docs/Api/OrderApi.md
+docs/Model/BehaviorOptionsInventory.md
+docs/Model/BehaviorOptionsInventoryAction.md
+docs/Model/BehaviorOptionsPaymentAction.md
+docs/Model/CancelOrderRequestBehaviorOptions.md
+docs/Model/CancelOrderRequestBehaviorOptionsPayment.md
 docs/Model/CreateOrderRequestInitialPayment.md
 docs/Model/ImportOrderRequestImportedPayment.md
 docs/Model/InitialPaymentInitialTransaction.md
@@ -116,6 +121,11 @@ lib/Api/OrderApi.php
 lib/ApiException.php
 lib/Configuration.php
 lib/HeaderSelector.php
+lib/Model/BehaviorOptionsInventory.php
+lib/Model/BehaviorOptionsInventoryAction.php
+lib/Model/BehaviorOptionsPaymentAction.php
+lib/Model/CancelOrderRequestBehaviorOptions.php
+lib/Model/CancelOrderRequestBehaviorOptionsPayment.php
 lib/Model/CreateOrderRequestInitialPayment.php
 lib/Model/ImportOrderRequestImportedPayment.php
 lib/Model/InitialPaymentInitialTransaction.php
@@ -226,3 +236,8 @@ lib/Model/ShipmentTracking.php
 lib/Model/UpdateOrderRequestPayload.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
+test/Model/BehaviorOptionsInventoryActionTest.php
+test/Model/BehaviorOptionsInventoryTest.php
+test/Model/BehaviorOptionsPaymentActionTest.php
+test/Model/CancelOrderRequestBehaviorOptionsPaymentTest.php
+test/Model/CancelOrderRequestBehaviorOptionsTest.php

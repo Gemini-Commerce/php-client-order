@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderCancelOrderRequest
+ * CancelOrderRequestBehaviorOptions
  *
  * PHP version 7.4
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \GeminiCommerce\Order\ObjectSerializer;
 
 /**
- * OrderCancelOrderRequest Class Doc Comment
+ * CancelOrderRequestBehaviorOptions Class Doc Comment
  *
  * @category Class
  * @package  GeminiCommerce\Order
@@ -41,7 +41,7 @@ use \GeminiCommerce\Order\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class OrderCancelOrderRequest implements ModelInterface, ArrayAccess, \JsonSerializable
+class CancelOrderRequestBehaviorOptions implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -52,7 +52,7 @@ class OrderCancelOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'orderCancelOrderRequest';
+    protected static $openAPIModelName = 'CancelOrderRequestBehaviorOptions';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,10 +60,8 @@ class OrderCancelOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'tenant_id' => 'string',
-        'order_id' => 'string',
-        'reason' => 'string',
-        'options' => '\GeminiCommerce\Order\Model\CancelOrderRequestBehaviorOptions'
+        'inventory' => '\GeminiCommerce\Order\Model\BehaviorOptionsInventory',
+        'payment' => '\GeminiCommerce\Order\Model\CancelOrderRequestBehaviorOptionsPayment'
     ];
 
     /**
@@ -74,10 +72,8 @@ class OrderCancelOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'tenant_id' => null,
-        'order_id' => null,
-        'reason' => null,
-        'options' => null
+        'inventory' => null,
+        'payment' => null
     ];
 
     /**
@@ -86,10 +82,8 @@ class OrderCancelOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'tenant_id' => false,
-        'order_id' => false,
-        'reason' => false,
-        'options' => false
+        'inventory' => false,
+        'payment' => false
     ];
 
     /**
@@ -178,10 +172,8 @@ class OrderCancelOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $attributeMap = [
-        'tenant_id' => 'tenantId',
-        'order_id' => 'orderId',
-        'reason' => 'reason',
-        'options' => 'options'
+        'inventory' => 'inventory',
+        'payment' => 'payment'
     ];
 
     /**
@@ -190,10 +182,8 @@ class OrderCancelOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
-        'tenant_id' => 'setTenantId',
-        'order_id' => 'setOrderId',
-        'reason' => 'setReason',
-        'options' => 'setOptions'
+        'inventory' => 'setInventory',
+        'payment' => 'setPayment'
     ];
 
     /**
@@ -202,10 +192,8 @@ class OrderCancelOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
-        'tenant_id' => 'getTenantId',
-        'order_id' => 'getOrderId',
-        'reason' => 'getReason',
-        'options' => 'getOptions'
+        'inventory' => 'getInventory',
+        'payment' => 'getPayment'
     ];
 
     /**
@@ -272,10 +260,8 @@ class OrderCancelOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('tenant_id', $data ?? [], null);
-        $this->setIfExists('order_id', $data ?? [], null);
-        $this->setIfExists('reason', $data ?? [], null);
-        $this->setIfExists('options', $data ?? [], null);
+        $this->setIfExists('inventory', $data ?? [], null);
+        $this->setIfExists('payment', $data ?? [], null);
     }
 
     /**
@@ -305,12 +291,6 @@ class OrderCancelOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     {
         $invalidProperties = [];
 
-        if ($this->container['tenant_id'] === null) {
-            $invalidProperties[] = "'tenant_id' can't be null";
-        }
-        if ($this->container['order_id'] === null) {
-            $invalidProperties[] = "'order_id' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -327,109 +307,55 @@ class OrderCancelOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
 
 
     /**
-     * Gets tenant_id
+     * Gets inventory
      *
-     * @return string
+     * @return \GeminiCommerce\Order\Model\BehaviorOptionsInventory|null
      */
-    public function getTenantId()
+    public function getInventory()
     {
-        return $this->container['tenant_id'];
+        return $this->container['inventory'];
     }
 
     /**
-     * Sets tenant_id
+     * Sets inventory
      *
-     * @param string $tenant_id tenant_id
+     * @param \GeminiCommerce\Order\Model\BehaviorOptionsInventory|null $inventory inventory
      *
      * @return self
      */
-    public function setTenantId($tenant_id)
+    public function setInventory($inventory)
     {
-        if (is_null($tenant_id)) {
-            throw new \InvalidArgumentException('non-nullable tenant_id cannot be null');
+        if (is_null($inventory)) {
+            throw new \InvalidArgumentException('non-nullable inventory cannot be null');
         }
-        $this->container['tenant_id'] = $tenant_id;
+        $this->container['inventory'] = $inventory;
 
         return $this;
     }
 
     /**
-     * Gets order_id
+     * Gets payment
      *
-     * @return string
+     * @return \GeminiCommerce\Order\Model\CancelOrderRequestBehaviorOptionsPayment|null
      */
-    public function getOrderId()
+    public function getPayment()
     {
-        return $this->container['order_id'];
+        return $this->container['payment'];
     }
 
     /**
-     * Sets order_id
+     * Sets payment
      *
-     * @param string $order_id order_id
+     * @param \GeminiCommerce\Order\Model\CancelOrderRequestBehaviorOptionsPayment|null $payment payment
      *
      * @return self
      */
-    public function setOrderId($order_id)
+    public function setPayment($payment)
     {
-        if (is_null($order_id)) {
-            throw new \InvalidArgumentException('non-nullable order_id cannot be null');
+        if (is_null($payment)) {
+            throw new \InvalidArgumentException('non-nullable payment cannot be null');
         }
-        $this->container['order_id'] = $order_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets reason
-     *
-     * @return string|null
-     */
-    public function getReason()
-    {
-        return $this->container['reason'];
-    }
-
-    /**
-     * Sets reason
-     *
-     * @param string|null $reason reason
-     *
-     * @return self
-     */
-    public function setReason($reason)
-    {
-        if (is_null($reason)) {
-            throw new \InvalidArgumentException('non-nullable reason cannot be null');
-        }
-        $this->container['reason'] = $reason;
-
-        return $this;
-    }
-
-    /**
-     * Gets options
-     *
-     * @return \GeminiCommerce\Order\Model\CancelOrderRequestBehaviorOptions|null
-     */
-    public function getOptions()
-    {
-        return $this->container['options'];
-    }
-
-    /**
-     * Sets options
-     *
-     * @param \GeminiCommerce\Order\Model\CancelOrderRequestBehaviorOptions|null $options options
-     *
-     * @return self
-     */
-    public function setOptions($options)
-    {
-        if (is_null($options)) {
-            throw new \InvalidArgumentException('non-nullable options cannot be null');
-        }
-        $this->container['options'] = $options;
+        $this->container['payment'] = $payment;
 
         return $this;
     }

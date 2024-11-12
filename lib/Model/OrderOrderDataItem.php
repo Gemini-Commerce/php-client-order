@@ -63,6 +63,7 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'id' => 'string',
         'product_grn' => 'string',
         'qty_ordered' => 'int',
+        'free_qty' => 'int',
         'qty_committed' => 'int',
         'unit_sale_price' => '\GeminiCommerce\Order\Model\OrderMoney',
         'unit_list_price' => '\GeminiCommerce\Order\Model\OrderMoney',
@@ -101,6 +102,7 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'id' => null,
         'product_grn' => null,
         'qty_ordered' => 'int64',
+        'free_qty' => 'int64',
         'qty_committed' => 'int64',
         'unit_sale_price' => null,
         'unit_list_price' => null,
@@ -137,6 +139,7 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'id' => false,
         'product_grn' => false,
         'qty_ordered' => false,
+        'free_qty' => false,
         'qty_committed' => false,
         'unit_sale_price' => false,
         'unit_list_price' => false,
@@ -253,6 +256,7 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'id' => 'id',
         'product_grn' => 'productGrn',
         'qty_ordered' => 'qtyOrdered',
+        'free_qty' => 'freeQty',
         'qty_committed' => 'qtyCommitted',
         'unit_sale_price' => 'unitSalePrice',
         'unit_list_price' => 'unitListPrice',
@@ -289,6 +293,7 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'id' => 'setId',
         'product_grn' => 'setProductGrn',
         'qty_ordered' => 'setQtyOrdered',
+        'free_qty' => 'setFreeQty',
         'qty_committed' => 'setQtyCommitted',
         'unit_sale_price' => 'setUnitSalePrice',
         'unit_list_price' => 'setUnitListPrice',
@@ -325,6 +330,7 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'id' => 'getId',
         'product_grn' => 'getProductGrn',
         'qty_ordered' => 'getQtyOrdered',
+        'free_qty' => 'getFreeQty',
         'qty_committed' => 'getQtyCommitted',
         'unit_sale_price' => 'getUnitSalePrice',
         'unit_list_price' => 'getUnitListPrice',
@@ -419,6 +425,7 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('product_grn', $data ?? [], null);
         $this->setIfExists('qty_ordered', $data ?? [], null);
+        $this->setIfExists('free_qty', $data ?? [], null);
         $this->setIfExists('qty_committed', $data ?? [], null);
         $this->setIfExists('unit_sale_price', $data ?? [], null);
         $this->setIfExists('unit_list_price', $data ?? [], null);
@@ -565,6 +572,33 @@ class OrderOrderDataItem implements ModelInterface, ArrayAccess, \JsonSerializab
             throw new \InvalidArgumentException('non-nullable qty_ordered cannot be null');
         }
         $this->container['qty_ordered'] = $qty_ordered;
+
+        return $this;
+    }
+
+    /**
+     * Gets free_qty
+     *
+     * @return int|null
+     */
+    public function getFreeQty()
+    {
+        return $this->container['free_qty'];
+    }
+
+    /**
+     * Sets free_qty
+     *
+     * @param int|null $free_qty free_qty
+     *
+     * @return self
+     */
+    public function setFreeQty($free_qty)
+    {
+        if (is_null($free_qty)) {
+            throw new \InvalidArgumentException('non-nullable free_qty cannot be null');
+        }
+        $this->container['free_qty'] = $free_qty;
 
         return $this;
     }

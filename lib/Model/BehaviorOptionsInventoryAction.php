@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderTransactionType
+ * BehaviorOptionsInventoryAction
  *
  * PHP version 7.4
  *
@@ -31,37 +31,21 @@ namespace GeminiCommerce\Order\Model;
 use \GeminiCommerce\Order\ObjectSerializer;
 
 /**
- * OrderTransactionType Class Doc Comment
+ * BehaviorOptionsInventoryAction Class Doc Comment
  *
  * @category Class
  * @package  GeminiCommerce\Order
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class OrderTransactionType
+class BehaviorOptionsInventoryAction
 {
     /**
      * Possible values of this enum
      */
     public const UNKNOWN = 'UNKNOWN';
 
-    public const AUTHORIZATION = 'AUTHORIZATION';
-
-    public const CAPTURE = 'CAPTURE';
-
-    public const SALE = 'SALE';
-
-    public const REFUND = 'REFUND';
-
-    public const VOID = 'VOID';
-
-    public const FAILED = 'FAILED';
-
-    public const PENDING = 'PENDING';
-
-    public const FRAUD = 'FRAUD';
-
-    public const NOOP = 'NOOP';
+    public const DO_NOT_HANDLE = 'DO_NOT_HANDLE';
 
     /**
      * Gets allowable values of the enum
@@ -71,15 +55,7 @@ class OrderTransactionType
     {
         return [
             self::UNKNOWN,
-            self::AUTHORIZATION,
-            self::CAPTURE,
-            self::SALE,
-            self::REFUND,
-            self::VOID,
-            self::FAILED,
-            self::PENDING,
-            self::FRAUD,
-            self::NOOP
+            self::DO_NOT_HANDLE
         ];
     }
 }

@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **id**| **string** |   | [optional]
 **product_grn**| **string** |   | [optional]
 **qty_ordered**| **int** |   | [optional]
+**free_qty**| **int** |   | [optional]
 **qty_committed**| **int** |   | [optional]
 **unit_sale_price**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   | [optional]
 **unit_list_price**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   | [optional]
