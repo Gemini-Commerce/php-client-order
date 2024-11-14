@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **grn**| **string** |   | [optional]
 **label**| **string** |   | [optional]
 **description**| **string** |   | [optional]
-**options**| [**\GeminiCommerce\Order\Model\ProductConfigurationStepOption[]**](ProductConfigurationStepOption.md) |   | [optional]
+**options**| [**\OpenAPI\Client\Model\ProductConfigurationStepOption[]**](ProductConfigurationStepOption.md) |   | [optional]
 
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code**| **string** |   |
 **additional_info**| **string** |   | [optional]
-**amounts**| [**\GeminiCommerce\Order\Model\OrderPaymentAmount[]**](OrderPaymentAmount.md) |   |
-**cc_info**| [**\GeminiCommerce\Order\Model\PaymentCcInfo**](PaymentCcInfo.md) |   | [optional]
+**amounts**| [**\OpenAPI\Client\Model\OrderPaymentAmount[]**](OrderPaymentAmount.md) |   |
+**cc_info**| [**\OpenAPI\Client\Model\PaymentCcInfo**](PaymentCcInfo.md) |   | [optional]
 **is_upfront**| **bool** |   | [optional]
 
 

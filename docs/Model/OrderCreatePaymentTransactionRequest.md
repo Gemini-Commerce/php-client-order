@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tenant_id**| **string** |   |
 **payment_id**| **string** |   |
-**type**| [**\GeminiCommerce\Order\Model\OrderTransactionType**](OrderTransactionType.md) |  for more information please, see Model/OrderTransactionType.php  |
+**type**| [**\OpenAPI\Client\Model\OrderTransactionType**](OrderTransactionType.md) |  for more information please, see Model/OrderTransactionType.php  |
 **additional_info**| **string** |   | [optional]
 
 

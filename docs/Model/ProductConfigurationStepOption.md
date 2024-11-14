@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **id**| **string** |   | [optional]
 **grn**| **string** |   | [optional]
 **label**| **string** |   | [optional]
-**price_variation**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   | [optional]
-**image**| [**\GeminiCommerce\Order\Model\OptionImage**](OptionImage.md) |   | [optional]
+**price_variation**| [**\OpenAPI\Client\Model\OrderMoney**](OrderMoney.md) |   | [optional]
+**image**| [**\OpenAPI\Client\Model\OptionImage**](OptionImage.md) |   | [optional]
 **has_quantity**| **bool** |   | [optional]
 **quantity**| **int** |   | [optional]
 

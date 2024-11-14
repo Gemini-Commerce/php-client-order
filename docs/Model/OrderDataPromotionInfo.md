@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 **additional_info**| **string** |   | [optional]
 **name**| **string** |   |
 **description**| **string** |   | [optional]
-**amount**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   |
+**amount**| [**\OpenAPI\Client\Model\OrderMoney**](OrderMoney.md) |   |
 **coupon_code**| **string** |   | [optional]
-**vat_amount**| [**\GeminiCommerce\Order\Model\OrderMoney**](OrderMoney.md) |   | [optional]
+**vat_amount**| [**\OpenAPI\Client\Model\OrderMoney**](OrderMoney.md) |   | [optional]
 **vat_percentage**| **float** |   | [optional]
 **vat_inaccurate**| **bool** |   | [optional]
 **vat_calculated**| **bool** |   | [optional]

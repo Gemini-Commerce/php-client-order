@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tenant_id**| **string** |   |
 **payment_id**| **string** |   |
-**items**| [**\GeminiCommerce\Order\Model\OrderRefundItem[]**](OrderRefundItem.md) |   | [optional]
-**amounts**| [**\GeminiCommerce\Order\Model\OrderRefundAmount[]**](OrderRefundAmount.md) |   |
+**items**| [**\OpenAPI\Client\Model\OrderRefundItem[]**](OrderRefundItem.md) |   | [optional]
+**amounts**| [**\OpenAPI\Client\Model\OrderRefundAmount[]**](OrderRefundAmount.md) |   |
 **note**| **string** |   | [optional]
 **additional_info**| **string** |   | [optional]
 

@@ -6,8 +6,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**billing_address**| [**\GeminiCommerce\Order\Model\OrderPostalAddress**](OrderPostalAddress.md) |   | [optional]
-**shipping_address**| [**\GeminiCommerce\Order\Model\OrderPostalAddress**](OrderPostalAddress.md) |   | [optional]
+**billing_address**| [**\OpenAPI\Client\Model\OrderPostalAddress**](OrderPostalAddress.md) |   | [optional]
+**shipping_address**| [**\OpenAPI\Client\Model\OrderPostalAddress**](OrderPostalAddress.md) |   | [optional]
 **additional_info**| **object** |   | [optional]
 
 

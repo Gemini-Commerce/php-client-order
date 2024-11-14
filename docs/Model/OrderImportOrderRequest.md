@@ -12,17 +12,17 @@ Name | Type | Description | Notes
 **channel**| **string** |   | [optional]
 **market**| **string** |   |
 **locale**| **string** |   |
-**customer_info**| [**\GeminiCommerce\Order\Model\OrderDataCustomerInfo**](OrderDataCustomerInfo.md) |   |
-**shipping_address**| [**\GeminiCommerce\Order\Model\OrderPostalAddress**](OrderPostalAddress.md) |   |
-**billing_address**| [**\GeminiCommerce\Order\Model\OrderPostalAddress**](OrderPostalAddress.md) |   |
-**payments**| [**\GeminiCommerce\Order\Model\ImportOrderRequestImportedPayment[]**](ImportOrderRequestImportedPayment.md) |   |
-**payments_info**| [**\GeminiCommerce\Order\Model\OrderDataPaymentInfo[]**](OrderDataPaymentInfo.md) |   |
-**shipments_info**| [**\GeminiCommerce\Order\Model\OrderDataShipmentInfo[]**](OrderDataShipmentInfo.md) |   |
-**items**| [**\GeminiCommerce\Order\Model\OrderOrderDataItem[]**](OrderOrderDataItem.md) |   |
-**subtotals**| [**array<string,\GeminiCommerce\Order\Model\OrderDataSubtotal>**](OrderDataSubtotal.md) |   |
-**totals**| [**array<string,\GeminiCommerce\Order\Model\OrderDataTotal>**](OrderDataTotal.md) |   |
+**customer_info**| [**\OpenAPI\Client\Model\OrderDataCustomerInfo**](OrderDataCustomerInfo.md) |   |
+**shipping_address**| [**\OpenAPI\Client\Model\OrderPostalAddress**](OrderPostalAddress.md) |   |
+**billing_address**| [**\OpenAPI\Client\Model\OrderPostalAddress**](OrderPostalAddress.md) |   |
+**payments**| [**\OpenAPI\Client\Model\ImportOrderRequestImportedPayment[]**](ImportOrderRequestImportedPayment.md) |   |
+**payments_info**| [**\OpenAPI\Client\Model\OrderDataPaymentInfo[]**](OrderDataPaymentInfo.md) |   |
+**shipments_info**| [**\OpenAPI\Client\Model\OrderDataShipmentInfo[]**](OrderDataShipmentInfo.md) |   |
+**items**| [**\OpenAPI\Client\Model\OrderOrderDataItem[]**](OrderOrderDataItem.md) |   |
+**subtotals**| [**array<string,\OpenAPI\Client\Model\OrderDataSubtotal>**](OrderDataSubtotal.md) |   |
+**totals**| [**array<string,\OpenAPI\Client\Model\OrderDataTotal>**](OrderDataTotal.md) |   |
 **status**| **string** |   |
-**currency**| [**\GeminiCommerce\Order\Model\OrderCurrency**](OrderCurrency.md) |  for more information please, see Model/OrderCurrency.php  |
+**currency**| [**\OpenAPI\Client\Model\OrderCurrency**](OrderCurrency.md) |  for more information please, see Model/OrderCurrency.php  |
 **vat_included**| **bool** |   | [optional]
 
 

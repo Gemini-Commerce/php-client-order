@@ -1,4 +1,4 @@
-# GeminiCommerce\Order\OrderApi
+# OpenAPI\Client\OrderApi
 
 All URIs are relative to https://dom.api.gogemini.io, except if the operation defines another base path.
 
@@ -73,18 +73,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderApproveOrderRequest(); // \GeminiCommerce\Order\Model\OrderApproveOrderRequest
+$body = new \OpenAPI\Client\Model\OrderApproveOrderRequest(); // \OpenAPI\Client\Model\OrderApproveOrderRequest
 
 try {
     $result = $apiInstance->approveOrder($body);
@@ -98,7 +98,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderApproveOrderRequest**](../Model/OrderApproveOrderRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderApproveOrderRequest**](../Model/OrderApproveOrderRequest.md)|  | |
 
 ### Return type
 
@@ -133,18 +133,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderAssignShipmentRequest(); // \GeminiCommerce\Order\Model\OrderAssignShipmentRequest
+$body = new \OpenAPI\Client\Model\OrderAssignShipmentRequest(); // \OpenAPI\Client\Model\OrderAssignShipmentRequest
 
 try {
     $result = $apiInstance->assignShipment($body);
@@ -158,7 +158,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderAssignShipmentRequest**](../Model/OrderAssignShipmentRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderAssignShipmentRequest**](../Model/OrderAssignShipmentRequest.md)|  | |
 
 ### Return type
 
@@ -180,7 +180,7 @@ try {
 ## `calculateRefund()`
 
 ```php
-calculateRefund($body): \GeminiCommerce\Order\Model\OrderCalculateRefundResponse
+calculateRefund($body): \OpenAPI\Client\Model\OrderCalculateRefundResponse
 ```
 
 Calculate Refund
@@ -193,18 +193,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderCalculateRefundRequest(); // \GeminiCommerce\Order\Model\OrderCalculateRefundRequest
+$body = new \OpenAPI\Client\Model\OrderCalculateRefundRequest(); // \OpenAPI\Client\Model\OrderCalculateRefundRequest
 
 try {
     $result = $apiInstance->calculateRefund($body);
@@ -218,11 +218,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderCalculateRefundRequest**](../Model/OrderCalculateRefundRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderCalculateRefundRequest**](../Model/OrderCalculateRefundRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderCalculateRefundResponse**](../Model/OrderCalculateRefundResponse.md)
+[**\OpenAPI\Client\Model\OrderCalculateRefundResponse**](../Model/OrderCalculateRefundResponse.md)
 
 ### Authorization
 
@@ -253,18 +253,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderCancelFulfillmentRequest(); // \GeminiCommerce\Order\Model\OrderCancelFulfillmentRequest
+$body = new \OpenAPI\Client\Model\OrderCancelFulfillmentRequest(); // \OpenAPI\Client\Model\OrderCancelFulfillmentRequest
 
 try {
     $result = $apiInstance->cancelFulfillment($body);
@@ -278,7 +278,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderCancelFulfillmentRequest**](../Model/OrderCancelFulfillmentRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderCancelFulfillmentRequest**](../Model/OrderCancelFulfillmentRequest.md)|  | |
 
 ### Return type
 
@@ -313,18 +313,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderCancelOrderRequest(); // \GeminiCommerce\Order\Model\OrderCancelOrderRequest
+$body = new \OpenAPI\Client\Model\OrderCancelOrderRequest(); // \OpenAPI\Client\Model\OrderCancelOrderRequest
 
 try {
     $result = $apiInstance->cancelOrder($body);
@@ -338,7 +338,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderCancelOrderRequest**](../Model/OrderCancelOrderRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderCancelOrderRequest**](../Model/OrderCancelOrderRequest.md)|  | |
 
 ### Return type
 
@@ -373,18 +373,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderCancelShipmentRequest(); // \GeminiCommerce\Order\Model\OrderCancelShipmentRequest
+$body = new \OpenAPI\Client\Model\OrderCancelShipmentRequest(); // \OpenAPI\Client\Model\OrderCancelShipmentRequest
 
 try {
     $result = $apiInstance->cancelShipment($body);
@@ -398,7 +398,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderCancelShipmentRequest**](../Model/OrderCancelShipmentRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderCancelShipmentRequest**](../Model/OrderCancelShipmentRequest.md)|  | |
 
 ### Return type
 
@@ -433,18 +433,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderCompleteShipmentPackingRequest(); // \GeminiCommerce\Order\Model\OrderCompleteShipmentPackingRequest
+$body = new \OpenAPI\Client\Model\OrderCompleteShipmentPackingRequest(); // \OpenAPI\Client\Model\OrderCompleteShipmentPackingRequest
 
 try {
     $result = $apiInstance->completeShipmentPacking($body);
@@ -458,7 +458,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderCompleteShipmentPackingRequest**](../Model/OrderCompleteShipmentPackingRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderCompleteShipmentPackingRequest**](../Model/OrderCompleteShipmentPackingRequest.md)|  | |
 
 ### Return type
 
@@ -480,7 +480,7 @@ try {
 ## `createFulfillment()`
 
 ```php
-createFulfillment($body): \GeminiCommerce\Order\Model\OrderFulfillment
+createFulfillment($body): \OpenAPI\Client\Model\OrderFulfillment
 ```
 
 Create Fulfillment
@@ -493,18 +493,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderCreateFulfillmentRequest(); // \GeminiCommerce\Order\Model\OrderCreateFulfillmentRequest
+$body = new \OpenAPI\Client\Model\OrderCreateFulfillmentRequest(); // \OpenAPI\Client\Model\OrderCreateFulfillmentRequest
 
 try {
     $result = $apiInstance->createFulfillment($body);
@@ -518,11 +518,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderCreateFulfillmentRequest**](../Model/OrderCreateFulfillmentRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderCreateFulfillmentRequest**](../Model/OrderCreateFulfillmentRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderFulfillment**](../Model/OrderFulfillment.md)
+[**\OpenAPI\Client\Model\OrderFulfillment**](../Model/OrderFulfillment.md)
 
 ### Authorization
 
@@ -540,7 +540,7 @@ try {
 ## `createOrder()`
 
 ```php
-createOrder($body): \GeminiCommerce\Order\Model\OrderOrderData
+createOrder($body): \OpenAPI\Client\Model\OrderOrderData
 ```
 
 Create Order
@@ -553,18 +553,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderCreateOrderRequest(); // \GeminiCommerce\Order\Model\OrderCreateOrderRequest
+$body = new \OpenAPI\Client\Model\OrderCreateOrderRequest(); // \OpenAPI\Client\Model\OrderCreateOrderRequest
 
 try {
     $result = $apiInstance->createOrder($body);
@@ -578,11 +578,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderCreateOrderRequest**](../Model/OrderCreateOrderRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderCreateOrderRequest**](../Model/OrderCreateOrderRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderOrderData**](../Model/OrderOrderData.md)
+[**\OpenAPI\Client\Model\OrderOrderData**](../Model/OrderOrderData.md)
 
 ### Authorization
 
@@ -600,7 +600,7 @@ try {
 ## `createOrderHistory()`
 
 ```php
-createOrderHistory($body): \GeminiCommerce\Order\Model\OrderDataHistory
+createOrderHistory($body): \OpenAPI\Client\Model\OrderDataHistory
 ```
 
 Create Order History
@@ -613,18 +613,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderCreateHistoryRequest(); // \GeminiCommerce\Order\Model\OrderCreateHistoryRequest
+$body = new \OpenAPI\Client\Model\OrderCreateHistoryRequest(); // \OpenAPI\Client\Model\OrderCreateHistoryRequest
 
 try {
     $result = $apiInstance->createOrderHistory($body);
@@ -638,11 +638,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderCreateHistoryRequest**](../Model/OrderCreateHistoryRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderCreateHistoryRequest**](../Model/OrderCreateHistoryRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderDataHistory**](../Model/OrderDataHistory.md)
+[**\OpenAPI\Client\Model\OrderDataHistory**](../Model/OrderDataHistory.md)
 
 ### Authorization
 
@@ -660,7 +660,7 @@ try {
 ## `createPayment()`
 
 ```php
-createPayment($body): \GeminiCommerce\Order\Model\OrderPayment
+createPayment($body): \OpenAPI\Client\Model\OrderPayment
 ```
 
 Create Payment
@@ -673,18 +673,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderCreatePaymentRequest(); // \GeminiCommerce\Order\Model\OrderCreatePaymentRequest
+$body = new \OpenAPI\Client\Model\OrderCreatePaymentRequest(); // \OpenAPI\Client\Model\OrderCreatePaymentRequest
 
 try {
     $result = $apiInstance->createPayment($body);
@@ -698,11 +698,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderCreatePaymentRequest**](../Model/OrderCreatePaymentRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderCreatePaymentRequest**](../Model/OrderCreatePaymentRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderPayment**](../Model/OrderPayment.md)
+[**\OpenAPI\Client\Model\OrderPayment**](../Model/OrderPayment.md)
 
 ### Authorization
 
@@ -720,7 +720,7 @@ try {
 ## `createPaymentTransaction()`
 
 ```php
-createPaymentTransaction($body): \GeminiCommerce\Order\Model\OrderTransaction
+createPaymentTransaction($body): \OpenAPI\Client\Model\OrderTransaction
 ```
 
 Create Payment Transaction
@@ -733,18 +733,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderCreatePaymentTransactionRequest(); // \GeminiCommerce\Order\Model\OrderCreatePaymentTransactionRequest
+$body = new \OpenAPI\Client\Model\OrderCreatePaymentTransactionRequest(); // \OpenAPI\Client\Model\OrderCreatePaymentTransactionRequest
 
 try {
     $result = $apiInstance->createPaymentTransaction($body);
@@ -758,11 +758,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderCreatePaymentTransactionRequest**](../Model/OrderCreatePaymentTransactionRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderCreatePaymentTransactionRequest**](../Model/OrderCreatePaymentTransactionRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderTransaction**](../Model/OrderTransaction.md)
+[**\OpenAPI\Client\Model\OrderTransaction**](../Model/OrderTransaction.md)
 
 ### Authorization
 
@@ -780,7 +780,7 @@ try {
 ## `createRefund()`
 
 ```php
-createRefund($body): \GeminiCommerce\Order\Model\OrderRefund
+createRefund($body): \OpenAPI\Client\Model\OrderRefund
 ```
 
 Create Refund
@@ -793,18 +793,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderCreateRefundRequest(); // \GeminiCommerce\Order\Model\OrderCreateRefundRequest
+$body = new \OpenAPI\Client\Model\OrderCreateRefundRequest(); // \OpenAPI\Client\Model\OrderCreateRefundRequest
 
 try {
     $result = $apiInstance->createRefund($body);
@@ -818,11 +818,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderCreateRefundRequest**](../Model/OrderCreateRefundRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderCreateRefundRequest**](../Model/OrderCreateRefundRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderRefund**](../Model/OrderRefund.md)
+[**\OpenAPI\Client\Model\OrderRefund**](../Model/OrderRefund.md)
 
 ### Authorization
 
@@ -840,7 +840,7 @@ try {
 ## `createRefundTransaction()`
 
 ```php
-createRefundTransaction($body): \GeminiCommerce\Order\Model\OrderTransaction
+createRefundTransaction($body): \OpenAPI\Client\Model\OrderTransaction
 ```
 
 Create Refund Transaction
@@ -853,18 +853,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderCreateRefundTransactionRequest(); // \GeminiCommerce\Order\Model\OrderCreateRefundTransactionRequest
+$body = new \OpenAPI\Client\Model\OrderCreateRefundTransactionRequest(); // \OpenAPI\Client\Model\OrderCreateRefundTransactionRequest
 
 try {
     $result = $apiInstance->createRefundTransaction($body);
@@ -878,11 +878,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderCreateRefundTransactionRequest**](../Model/OrderCreateRefundTransactionRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderCreateRefundTransactionRequest**](../Model/OrderCreateRefundTransactionRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderTransaction**](../Model/OrderTransaction.md)
+[**\OpenAPI\Client\Model\OrderTransaction**](../Model/OrderTransaction.md)
 
 ### Authorization
 
@@ -900,7 +900,7 @@ try {
 ## `createShipment()`
 
 ```php
-createShipment($body): \GeminiCommerce\Order\Model\OrderShipment
+createShipment($body): \OpenAPI\Client\Model\OrderShipment
 ```
 
 Create Shipment
@@ -913,18 +913,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderCreateShipmentRequest(); // \GeminiCommerce\Order\Model\OrderCreateShipmentRequest
+$body = new \OpenAPI\Client\Model\OrderCreateShipmentRequest(); // \OpenAPI\Client\Model\OrderCreateShipmentRequest
 
 try {
     $result = $apiInstance->createShipment($body);
@@ -938,11 +938,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderCreateShipmentRequest**](../Model/OrderCreateShipmentRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderCreateShipmentRequest**](../Model/OrderCreateShipmentRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderShipment**](../Model/OrderShipment.md)
+[**\OpenAPI\Client\Model\OrderShipment**](../Model/OrderShipment.md)
 
 ### Authorization
 
@@ -973,18 +973,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderDeleteOrderRequest(); // \GeminiCommerce\Order\Model\OrderDeleteOrderRequest
+$body = new \OpenAPI\Client\Model\OrderDeleteOrderRequest(); // \OpenAPI\Client\Model\OrderDeleteOrderRequest
 
 try {
     $result = $apiInstance->deleteOrder($body);
@@ -998,7 +998,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderDeleteOrderRequest**](../Model/OrderDeleteOrderRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderDeleteOrderRequest**](../Model/OrderDeleteOrderRequest.md)|  | |
 
 ### Return type
 
@@ -1020,7 +1020,7 @@ try {
 ## `getFulfillment()`
 
 ```php
-getFulfillment($body): \GeminiCommerce\Order\Model\OrderFulfillment
+getFulfillment($body): \OpenAPI\Client\Model\OrderFulfillment
 ```
 
 Get Fulfillment
@@ -1033,18 +1033,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderGetFulfillmentRequest(); // \GeminiCommerce\Order\Model\OrderGetFulfillmentRequest
+$body = new \OpenAPI\Client\Model\OrderGetFulfillmentRequest(); // \OpenAPI\Client\Model\OrderGetFulfillmentRequest
 
 try {
     $result = $apiInstance->getFulfillment($body);
@@ -1058,11 +1058,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderGetFulfillmentRequest**](../Model/OrderGetFulfillmentRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderGetFulfillmentRequest**](../Model/OrderGetFulfillmentRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderFulfillment**](../Model/OrderFulfillment.md)
+[**\OpenAPI\Client\Model\OrderFulfillment**](../Model/OrderFulfillment.md)
 
 ### Authorization
 
@@ -1080,7 +1080,7 @@ try {
 ## `getOrder()`
 
 ```php
-getOrder($body): \GeminiCommerce\Order\Model\OrderOrderData
+getOrder($body): \OpenAPI\Client\Model\OrderOrderData
 ```
 
 Get Order
@@ -1093,18 +1093,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderGetOrderRequest(); // \GeminiCommerce\Order\Model\OrderGetOrderRequest
+$body = new \OpenAPI\Client\Model\OrderGetOrderRequest(); // \OpenAPI\Client\Model\OrderGetOrderRequest
 
 try {
     $result = $apiInstance->getOrder($body);
@@ -1118,11 +1118,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderGetOrderRequest**](../Model/OrderGetOrderRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderGetOrderRequest**](../Model/OrderGetOrderRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderOrderData**](../Model/OrderOrderData.md)
+[**\OpenAPI\Client\Model\OrderOrderData**](../Model/OrderOrderData.md)
 
 ### Authorization
 
@@ -1140,7 +1140,7 @@ try {
 ## `getOrderByCartId()`
 
 ```php
-getOrderByCartId($body): \GeminiCommerce\Order\Model\OrderOrderData
+getOrderByCartId($body): \OpenAPI\Client\Model\OrderOrderData
 ```
 
 Get Order by Cart ID
@@ -1153,18 +1153,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderGetOrderByCartIdRequest(); // \GeminiCommerce\Order\Model\OrderGetOrderByCartIdRequest
+$body = new \OpenAPI\Client\Model\OrderGetOrderByCartIdRequest(); // \OpenAPI\Client\Model\OrderGetOrderByCartIdRequest
 
 try {
     $result = $apiInstance->getOrderByCartId($body);
@@ -1178,11 +1178,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderGetOrderByCartIdRequest**](../Model/OrderGetOrderByCartIdRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderGetOrderByCartIdRequest**](../Model/OrderGetOrderByCartIdRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderOrderData**](../Model/OrderOrderData.md)
+[**\OpenAPI\Client\Model\OrderOrderData**](../Model/OrderOrderData.md)
 
 ### Authorization
 
@@ -1200,7 +1200,7 @@ try {
 ## `getOrderByOrderNumber()`
 
 ```php
-getOrderByOrderNumber($body): \GeminiCommerce\Order\Model\OrderOrderData
+getOrderByOrderNumber($body): \OpenAPI\Client\Model\OrderOrderData
 ```
 
 Get Order by Order Number
@@ -1213,18 +1213,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderGetOrderByOrderNumberRequest(); // \GeminiCommerce\Order\Model\OrderGetOrderByOrderNumberRequest
+$body = new \OpenAPI\Client\Model\OrderGetOrderByOrderNumberRequest(); // \OpenAPI\Client\Model\OrderGetOrderByOrderNumberRequest
 
 try {
     $result = $apiInstance->getOrderByOrderNumber($body);
@@ -1238,11 +1238,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderGetOrderByOrderNumberRequest**](../Model/OrderGetOrderByOrderNumberRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderGetOrderByOrderNumberRequest**](../Model/OrderGetOrderByOrderNumberRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderOrderData**](../Model/OrderOrderData.md)
+[**\OpenAPI\Client\Model\OrderOrderData**](../Model/OrderOrderData.md)
 
 ### Authorization
 
@@ -1260,7 +1260,7 @@ try {
 ## `getPayment()`
 
 ```php
-getPayment($body): \GeminiCommerce\Order\Model\OrderPayment
+getPayment($body): \OpenAPI\Client\Model\OrderPayment
 ```
 
 Get Payment
@@ -1273,18 +1273,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderGetPaymentRequest(); // \GeminiCommerce\Order\Model\OrderGetPaymentRequest
+$body = new \OpenAPI\Client\Model\OrderGetPaymentRequest(); // \OpenAPI\Client\Model\OrderGetPaymentRequest
 
 try {
     $result = $apiInstance->getPayment($body);
@@ -1298,11 +1298,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderGetPaymentRequest**](../Model/OrderGetPaymentRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderGetPaymentRequest**](../Model/OrderGetPaymentRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderPayment**](../Model/OrderPayment.md)
+[**\OpenAPI\Client\Model\OrderPayment**](../Model/OrderPayment.md)
 
 ### Authorization
 
@@ -1320,7 +1320,7 @@ try {
 ## `getShipment()`
 
 ```php
-getShipment($body): \GeminiCommerce\Order\Model\OrderShipment
+getShipment($body): \OpenAPI\Client\Model\OrderShipment
 ```
 
 Get Shipment
@@ -1333,18 +1333,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderGetShipmentRequest(); // \GeminiCommerce\Order\Model\OrderGetShipmentRequest
+$body = new \OpenAPI\Client\Model\OrderGetShipmentRequest(); // \OpenAPI\Client\Model\OrderGetShipmentRequest
 
 try {
     $result = $apiInstance->getShipment($body);
@@ -1358,11 +1358,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderGetShipmentRequest**](../Model/OrderGetShipmentRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderGetShipmentRequest**](../Model/OrderGetShipmentRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderShipment**](../Model/OrderShipment.md)
+[**\OpenAPI\Client\Model\OrderShipment**](../Model/OrderShipment.md)
 
 ### Authorization
 
@@ -1380,7 +1380,7 @@ try {
 ## `getTransaction()`
 
 ```php
-getTransaction($body): \GeminiCommerce\Order\Model\OrderTransaction
+getTransaction($body): \OpenAPI\Client\Model\OrderTransaction
 ```
 
 Get Transaction
@@ -1393,18 +1393,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderGetTransactionRequest(); // \GeminiCommerce\Order\Model\OrderGetTransactionRequest
+$body = new \OpenAPI\Client\Model\OrderGetTransactionRequest(); // \OpenAPI\Client\Model\OrderGetTransactionRequest
 
 try {
     $result = $apiInstance->getTransaction($body);
@@ -1418,11 +1418,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderGetTransactionRequest**](../Model/OrderGetTransactionRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderGetTransactionRequest**](../Model/OrderGetTransactionRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderTransaction**](../Model/OrderTransaction.md)
+[**\OpenAPI\Client\Model\OrderTransaction**](../Model/OrderTransaction.md)
 
 ### Authorization
 
@@ -1453,18 +1453,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderHoldOrderRequest(); // \GeminiCommerce\Order\Model\OrderHoldOrderRequest
+$body = new \OpenAPI\Client\Model\OrderHoldOrderRequest(); // \OpenAPI\Client\Model\OrderHoldOrderRequest
 
 try {
     $result = $apiInstance->holdOrder($body);
@@ -1478,7 +1478,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderHoldOrderRequest**](../Model/OrderHoldOrderRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderHoldOrderRequest**](../Model/OrderHoldOrderRequest.md)|  | |
 
 ### Return type
 
@@ -1500,7 +1500,7 @@ try {
 ## `importOrder()`
 
 ```php
-importOrder($body): \GeminiCommerce\Order\Model\OrderOrderData
+importOrder($body): \OpenAPI\Client\Model\OrderOrderData
 ```
 
 Import Order
@@ -1513,18 +1513,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderImportOrderRequest(); // \GeminiCommerce\Order\Model\OrderImportOrderRequest
+$body = new \OpenAPI\Client\Model\OrderImportOrderRequest(); // \OpenAPI\Client\Model\OrderImportOrderRequest
 
 try {
     $result = $apiInstance->importOrder($body);
@@ -1538,11 +1538,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderImportOrderRequest**](../Model/OrderImportOrderRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderImportOrderRequest**](../Model/OrderImportOrderRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderOrderData**](../Model/OrderOrderData.md)
+[**\OpenAPI\Client\Model\OrderOrderData**](../Model/OrderOrderData.md)
 
 ### Authorization
 
@@ -1560,7 +1560,7 @@ try {
 ## `listFulfillments()`
 
 ```php
-listFulfillments($body): \GeminiCommerce\Order\Model\OrderListFulfillmentsResponse
+listFulfillments($body): \OpenAPI\Client\Model\OrderListFulfillmentsResponse
 ```
 
 List Fulfillments
@@ -1573,18 +1573,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderListFulfillmentsRequest(); // \GeminiCommerce\Order\Model\OrderListFulfillmentsRequest
+$body = new \OpenAPI\Client\Model\OrderListFulfillmentsRequest(); // \OpenAPI\Client\Model\OrderListFulfillmentsRequest
 
 try {
     $result = $apiInstance->listFulfillments($body);
@@ -1598,11 +1598,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderListFulfillmentsRequest**](../Model/OrderListFulfillmentsRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderListFulfillmentsRequest**](../Model/OrderListFulfillmentsRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderListFulfillmentsResponse**](../Model/OrderListFulfillmentsResponse.md)
+[**\OpenAPI\Client\Model\OrderListFulfillmentsResponse**](../Model/OrderListFulfillmentsResponse.md)
 
 ### Authorization
 
@@ -1620,7 +1620,7 @@ try {
 ## `listOrders()`
 
 ```php
-listOrders($body): \GeminiCommerce\Order\Model\OrderListOrdersResponse
+listOrders($body): \OpenAPI\Client\Model\OrderListOrdersResponse
 ```
 
 List Orders
@@ -1633,18 +1633,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderListOrdersRequest(); // \GeminiCommerce\Order\Model\OrderListOrdersRequest
+$body = new \OpenAPI\Client\Model\OrderListOrdersRequest(); // \OpenAPI\Client\Model\OrderListOrdersRequest
 
 try {
     $result = $apiInstance->listOrders($body);
@@ -1658,11 +1658,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderListOrdersRequest**](../Model/OrderListOrdersRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderListOrdersRequest**](../Model/OrderListOrdersRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderListOrdersResponse**](../Model/OrderListOrdersResponse.md)
+[**\OpenAPI\Client\Model\OrderListOrdersResponse**](../Model/OrderListOrdersResponse.md)
 
 ### Authorization
 
@@ -1680,7 +1680,7 @@ try {
 ## `listOrdersByCustomer()`
 
 ```php
-listOrdersByCustomer($body): \GeminiCommerce\Order\Model\OrderListOrdersByCustomerResponse
+listOrdersByCustomer($body): \OpenAPI\Client\Model\OrderListOrdersByCustomerResponse
 ```
 
 List Orders by Customer
@@ -1693,18 +1693,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderListOrdersByCustomerRequest(); // \GeminiCommerce\Order\Model\OrderListOrdersByCustomerRequest
+$body = new \OpenAPI\Client\Model\OrderListOrdersByCustomerRequest(); // \OpenAPI\Client\Model\OrderListOrdersByCustomerRequest
 
 try {
     $result = $apiInstance->listOrdersByCustomer($body);
@@ -1718,11 +1718,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderListOrdersByCustomerRequest**](../Model/OrderListOrdersByCustomerRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderListOrdersByCustomerRequest**](../Model/OrderListOrdersByCustomerRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderListOrdersByCustomerResponse**](../Model/OrderListOrdersByCustomerResponse.md)
+[**\OpenAPI\Client\Model\OrderListOrdersByCustomerResponse**](../Model/OrderListOrdersByCustomerResponse.md)
 
 ### Authorization
 
@@ -1740,7 +1740,7 @@ try {
 ## `listOrdersByNumbers()`
 
 ```php
-listOrdersByNumbers($body): \GeminiCommerce\Order\Model\OrderListOrdersByNumbersResponse
+listOrdersByNumbers($body): \OpenAPI\Client\Model\OrderListOrdersByNumbersResponse
 ```
 
 List Orders by Numbers
@@ -1753,18 +1753,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderListOrdersByNumbersRequest(); // \GeminiCommerce\Order\Model\OrderListOrdersByNumbersRequest
+$body = new \OpenAPI\Client\Model\OrderListOrdersByNumbersRequest(); // \OpenAPI\Client\Model\OrderListOrdersByNumbersRequest
 
 try {
     $result = $apiInstance->listOrdersByNumbers($body);
@@ -1778,11 +1778,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderListOrdersByNumbersRequest**](../Model/OrderListOrdersByNumbersRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderListOrdersByNumbersRequest**](../Model/OrderListOrdersByNumbersRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderListOrdersByNumbersResponse**](../Model/OrderListOrdersByNumbersResponse.md)
+[**\OpenAPI\Client\Model\OrderListOrdersByNumbersResponse**](../Model/OrderListOrdersByNumbersResponse.md)
 
 ### Authorization
 
@@ -1800,7 +1800,7 @@ try {
 ## `listShipments()`
 
 ```php
-listShipments($body): \GeminiCommerce\Order\Model\OrderListShipmentsResponse
+listShipments($body): \OpenAPI\Client\Model\OrderListShipmentsResponse
 ```
 
 List Shipments
@@ -1813,18 +1813,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderListShipmentsRequest(); // \GeminiCommerce\Order\Model\OrderListShipmentsRequest
+$body = new \OpenAPI\Client\Model\OrderListShipmentsRequest(); // \OpenAPI\Client\Model\OrderListShipmentsRequest
 
 try {
     $result = $apiInstance->listShipments($body);
@@ -1838,11 +1838,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderListShipmentsRequest**](../Model/OrderListShipmentsRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderListShipmentsRequest**](../Model/OrderListShipmentsRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderListShipmentsResponse**](../Model/OrderListShipmentsResponse.md)
+[**\OpenAPI\Client\Model\OrderListShipmentsResponse**](../Model/OrderListShipmentsResponse.md)
 
 ### Authorization
 
@@ -1873,18 +1873,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderAddDocumentRequest(); // \GeminiCommerce\Order\Model\OrderAddDocumentRequest
+$body = new \OpenAPI\Client\Model\OrderAddDocumentRequest(); // \OpenAPI\Client\Model\OrderAddDocumentRequest
 
 try {
     $result = $apiInstance->orderAddDocument($body);
@@ -1898,7 +1898,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderAddDocumentRequest**](../Model/OrderAddDocumentRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderAddDocumentRequest**](../Model/OrderAddDocumentRequest.md)|  | |
 
 ### Return type
 
@@ -1933,18 +1933,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderRemoveDocumentByCodeRequest(); // \GeminiCommerce\Order\Model\OrderRemoveDocumentByCodeRequest
+$body = new \OpenAPI\Client\Model\OrderRemoveDocumentByCodeRequest(); // \OpenAPI\Client\Model\OrderRemoveDocumentByCodeRequest
 
 try {
     $result = $apiInstance->orderRemoveDocumentByCode($body);
@@ -1958,7 +1958,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderRemoveDocumentByCodeRequest**](../Model/OrderRemoveDocumentByCodeRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderRemoveDocumentByCodeRequest**](../Model/OrderRemoveDocumentByCodeRequest.md)|  | |
 
 ### Return type
 
@@ -1980,7 +1980,7 @@ try {
 ## `printOrdersLabels()`
 
 ```php
-printOrdersLabels($body): \GeminiCommerce\Order\Model\OrderPrintOrdersLabelsResponse
+printOrdersLabels($body): \OpenAPI\Client\Model\OrderPrintOrdersLabelsResponse
 ```
 
 Print Orders Labels
@@ -1993,18 +1993,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderPrintOrdersLabelsRequest(); // \GeminiCommerce\Order\Model\OrderPrintOrdersLabelsRequest
+$body = new \OpenAPI\Client\Model\OrderPrintOrdersLabelsRequest(); // \OpenAPI\Client\Model\OrderPrintOrdersLabelsRequest
 
 try {
     $result = $apiInstance->printOrdersLabels($body);
@@ -2018,11 +2018,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderPrintOrdersLabelsRequest**](../Model/OrderPrintOrdersLabelsRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderPrintOrdersLabelsRequest**](../Model/OrderPrintOrdersLabelsRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderPrintOrdersLabelsResponse**](../Model/OrderPrintOrdersLabelsResponse.md)
+[**\OpenAPI\Client\Model\OrderPrintOrdersLabelsResponse**](../Model/OrderPrintOrdersLabelsResponse.md)
 
 ### Authorization
 
@@ -2053,18 +2053,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderQuashFulfillmentRequest(); // \GeminiCommerce\Order\Model\OrderQuashFulfillmentRequest
+$body = new \OpenAPI\Client\Model\OrderQuashFulfillmentRequest(); // \OpenAPI\Client\Model\OrderQuashFulfillmentRequest
 
 try {
     $result = $apiInstance->quashFulfillment($body);
@@ -2078,7 +2078,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderQuashFulfillmentRequest**](../Model/OrderQuashFulfillmentRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderQuashFulfillmentRequest**](../Model/OrderQuashFulfillmentRequest.md)|  | |
 
 ### Return type
 
@@ -2113,18 +2113,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderQuashShipmentRequest(); // \GeminiCommerce\Order\Model\OrderQuashShipmentRequest
+$body = new \OpenAPI\Client\Model\OrderQuashShipmentRequest(); // \OpenAPI\Client\Model\OrderQuashShipmentRequest
 
 try {
     $result = $apiInstance->quashShipment($body);
@@ -2138,7 +2138,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderQuashShipmentRequest**](../Model/OrderQuashShipmentRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderQuashShipmentRequest**](../Model/OrderQuashShipmentRequest.md)|  | |
 
 ### Return type
 
@@ -2173,18 +2173,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderReceiveFulfillmentRequest(); // \GeminiCommerce\Order\Model\OrderReceiveFulfillmentRequest
+$body = new \OpenAPI\Client\Model\OrderReceiveFulfillmentRequest(); // \OpenAPI\Client\Model\OrderReceiveFulfillmentRequest
 
 try {
     $result = $apiInstance->receiveFulfillment($body);
@@ -2198,7 +2198,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderReceiveFulfillmentRequest**](../Model/OrderReceiveFulfillmentRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderReceiveFulfillmentRequest**](../Model/OrderReceiveFulfillmentRequest.md)|  | |
 
 ### Return type
 
@@ -2233,18 +2233,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderReportFulfillmentErrorRequest(); // \GeminiCommerce\Order\Model\OrderReportFulfillmentErrorRequest
+$body = new \OpenAPI\Client\Model\OrderReportFulfillmentErrorRequest(); // \OpenAPI\Client\Model\OrderReportFulfillmentErrorRequest
 
 try {
     $result = $apiInstance->reportFulfillmentError($body);
@@ -2258,7 +2258,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderReportFulfillmentErrorRequest**](../Model/OrderReportFulfillmentErrorRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderReportFulfillmentErrorRequest**](../Model/OrderReportFulfillmentErrorRequest.md)|  | |
 
 ### Return type
 
@@ -2293,18 +2293,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderReportFulfillmentNotResolvableRequest(); // \GeminiCommerce\Order\Model\OrderReportFulfillmentNotResolvableRequest
+$body = new \OpenAPI\Client\Model\OrderReportFulfillmentNotResolvableRequest(); // \OpenAPI\Client\Model\OrderReportFulfillmentNotResolvableRequest
 
 try {
     $result = $apiInstance->reportFulfillmentNotResolvable($body);
@@ -2318,7 +2318,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderReportFulfillmentNotResolvableRequest**](../Model/OrderReportFulfillmentNotResolvableRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderReportFulfillmentNotResolvableRequest**](../Model/OrderReportFulfillmentNotResolvableRequest.md)|  | |
 
 ### Return type
 
@@ -2353,18 +2353,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderReportFulfillmentReadyRequest(); // \GeminiCommerce\Order\Model\OrderReportFulfillmentReadyRequest
+$body = new \OpenAPI\Client\Model\OrderReportFulfillmentReadyRequest(); // \OpenAPI\Client\Model\OrderReportFulfillmentReadyRequest
 
 try {
     $result = $apiInstance->reportFulfillmentReady($body);
@@ -2378,7 +2378,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderReportFulfillmentReadyRequest**](../Model/OrderReportFulfillmentReadyRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderReportFulfillmentReadyRequest**](../Model/OrderReportFulfillmentReadyRequest.md)|  | |
 
 ### Return type
 
@@ -2413,18 +2413,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderReportShipmentDeliveryRequest(); // \GeminiCommerce\Order\Model\OrderReportShipmentDeliveryRequest
+$body = new \OpenAPI\Client\Model\OrderReportShipmentDeliveryRequest(); // \OpenAPI\Client\Model\OrderReportShipmentDeliveryRequest
 
 try {
     $result = $apiInstance->reportShipmentDelivery($body);
@@ -2438,7 +2438,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderReportShipmentDeliveryRequest**](../Model/OrderReportShipmentDeliveryRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderReportShipmentDeliveryRequest**](../Model/OrderReportShipmentDeliveryRequest.md)|  | |
 
 ### Return type
 
@@ -2473,18 +2473,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderReportShipmentMissingStockRequest(); // \GeminiCommerce\Order\Model\OrderReportShipmentMissingStockRequest
+$body = new \OpenAPI\Client\Model\OrderReportShipmentMissingStockRequest(); // \OpenAPI\Client\Model\OrderReportShipmentMissingStockRequest
 
 try {
     $result = $apiInstance->reportShipmentMissingStock($body);
@@ -2498,7 +2498,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderReportShipmentMissingStockRequest**](../Model/OrderReportShipmentMissingStockRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderReportShipmentMissingStockRequest**](../Model/OrderReportShipmentMissingStockRequest.md)|  | |
 
 ### Return type
 
@@ -2533,18 +2533,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderResolveShipmentMissingStockRequest(); // \GeminiCommerce\Order\Model\OrderResolveShipmentMissingStockRequest
+$body = new \OpenAPI\Client\Model\OrderResolveShipmentMissingStockRequest(); // \OpenAPI\Client\Model\OrderResolveShipmentMissingStockRequest
 
 try {
     $result = $apiInstance->resolveShipmentMissingStock($body);
@@ -2558,7 +2558,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderResolveShipmentMissingStockRequest**](../Model/OrderResolveShipmentMissingStockRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderResolveShipmentMissingStockRequest**](../Model/OrderResolveShipmentMissingStockRequest.md)|  | |
 
 ### Return type
 
@@ -2593,18 +2593,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderRetryFulfillmentRequest(); // \GeminiCommerce\Order\Model\OrderRetryFulfillmentRequest
+$body = new \OpenAPI\Client\Model\OrderRetryFulfillmentRequest(); // \OpenAPI\Client\Model\OrderRetryFulfillmentRequest
 
 try {
     $result = $apiInstance->retryFulfillment($body);
@@ -2618,7 +2618,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderRetryFulfillmentRequest**](../Model/OrderRetryFulfillmentRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderRetryFulfillmentRequest**](../Model/OrderRetryFulfillmentRequest.md)|  | |
 
 ### Return type
 
@@ -2640,7 +2640,7 @@ try {
 ## `searchOrders()`
 
 ```php
-searchOrders($body): \GeminiCommerce\Order\Model\OrderSearchOrdersResponse
+searchOrders($body): \OpenAPI\Client\Model\OrderSearchOrdersResponse
 ```
 
 Search Orders
@@ -2653,18 +2653,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderSearchOrdersRequest(); // \GeminiCommerce\Order\Model\OrderSearchOrdersRequest
+$body = new \OpenAPI\Client\Model\OrderSearchOrdersRequest(); // \OpenAPI\Client\Model\OrderSearchOrdersRequest
 
 try {
     $result = $apiInstance->searchOrders($body);
@@ -2678,11 +2678,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderSearchOrdersRequest**](../Model/OrderSearchOrdersRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderSearchOrdersRequest**](../Model/OrderSearchOrdersRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderSearchOrdersResponse**](../Model/OrderSearchOrdersResponse.md)
+[**\OpenAPI\Client\Model\OrderSearchOrdersResponse**](../Model/OrderSearchOrdersResponse.md)
 
 ### Authorization
 
@@ -2713,18 +2713,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderSendFulfillmentRequest(); // \GeminiCommerce\Order\Model\OrderSendFulfillmentRequest
+$body = new \OpenAPI\Client\Model\OrderSendFulfillmentRequest(); // \OpenAPI\Client\Model\OrderSendFulfillmentRequest
 
 try {
     $result = $apiInstance->sendFulfillment($body);
@@ -2738,7 +2738,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderSendFulfillmentRequest**](../Model/OrderSendFulfillmentRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderSendFulfillmentRequest**](../Model/OrderSendFulfillmentRequest.md)|  | |
 
 ### Return type
 
@@ -2773,18 +2773,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderSendOrderNotificationRequest(); // \GeminiCommerce\Order\Model\OrderSendOrderNotificationRequest
+$body = new \OpenAPI\Client\Model\OrderSendOrderNotificationRequest(); // \OpenAPI\Client\Model\OrderSendOrderNotificationRequest
 
 try {
     $result = $apiInstance->sendOrderNotification($body);
@@ -2798,7 +2798,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderSendOrderNotificationRequest**](../Model/OrderSendOrderNotificationRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderSendOrderNotificationRequest**](../Model/OrderSendOrderNotificationRequest.md)|  | |
 
 ### Return type
 
@@ -2833,18 +2833,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderStartFulfillmentProcessingRequest(); // \GeminiCommerce\Order\Model\OrderStartFulfillmentProcessingRequest
+$body = new \OpenAPI\Client\Model\OrderStartFulfillmentProcessingRequest(); // \OpenAPI\Client\Model\OrderStartFulfillmentProcessingRequest
 
 try {
     $result = $apiInstance->startFulfillmentProcessing($body);
@@ -2858,7 +2858,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderStartFulfillmentProcessingRequest**](../Model/OrderStartFulfillmentProcessingRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderStartFulfillmentProcessingRequest**](../Model/OrderStartFulfillmentProcessingRequest.md)|  | |
 
 ### Return type
 
@@ -2893,18 +2893,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderStartShipmentProcessingRequest(); // \GeminiCommerce\Order\Model\OrderStartShipmentProcessingRequest
+$body = new \OpenAPI\Client\Model\OrderStartShipmentProcessingRequest(); // \OpenAPI\Client\Model\OrderStartShipmentProcessingRequest
 
 try {
     $result = $apiInstance->startShipmentProcessing($body);
@@ -2918,7 +2918,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderStartShipmentProcessingRequest**](../Model/OrderStartShipmentProcessingRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderStartShipmentProcessingRequest**](../Model/OrderStartShipmentProcessingRequest.md)|  | |
 
 ### Return type
 
@@ -2953,18 +2953,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderUnholdOrderRequest(); // \GeminiCommerce\Order\Model\OrderUnholdOrderRequest
+$body = new \OpenAPI\Client\Model\OrderUnholdOrderRequest(); // \OpenAPI\Client\Model\OrderUnholdOrderRequest
 
 try {
     $result = $apiInstance->unholdOrder($body);
@@ -2978,7 +2978,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderUnholdOrderRequest**](../Model/OrderUnholdOrderRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderUnholdOrderRequest**](../Model/OrderUnholdOrderRequest.md)|  | |
 
 ### Return type
 
@@ -3000,7 +3000,7 @@ try {
 ## `updateOrder()`
 
 ```php
-updateOrder($body): \GeminiCommerce\Order\Model\OrderOrderData
+updateOrder($body): \OpenAPI\Client\Model\OrderOrderData
 ```
 
 Update Order
@@ -3013,18 +3013,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderUpdateOrderRequest(); // \GeminiCommerce\Order\Model\OrderUpdateOrderRequest
+$body = new \OpenAPI\Client\Model\OrderUpdateOrderRequest(); // \OpenAPI\Client\Model\OrderUpdateOrderRequest
 
 try {
     $result = $apiInstance->updateOrder($body);
@@ -3038,11 +3038,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderUpdateOrderRequest**](../Model/OrderUpdateOrderRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderUpdateOrderRequest**](../Model/OrderUpdateOrderRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderOrderData**](../Model/OrderOrderData.md)
+[**\OpenAPI\Client\Model\OrderOrderData**](../Model/OrderOrderData.md)
 
 ### Authorization
 
@@ -3060,7 +3060,7 @@ try {
 ## `updatePayment()`
 
 ```php
-updatePayment($body): \GeminiCommerce\Order\Model\OrderPayment
+updatePayment($body): \OpenAPI\Client\Model\OrderPayment
 ```
 
 Update Payment
@@ -3073,18 +3073,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Order\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Order\Api\OrderApi(
+$apiInstance = new OpenAPI\Client\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Order\Model\OrderUpdatePaymentRequest(); // \GeminiCommerce\Order\Model\OrderUpdatePaymentRequest
+$body = new \OpenAPI\Client\Model\OrderUpdatePaymentRequest(); // \OpenAPI\Client\Model\OrderUpdatePaymentRequest
 
 try {
     $result = $apiInstance->updatePayment($body);
@@ -3098,11 +3098,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Order\Model\OrderUpdatePaymentRequest**](../Model/OrderUpdatePaymentRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\OrderUpdatePaymentRequest**](../Model/OrderUpdatePaymentRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Order\Model\OrderPayment**](../Model/OrderPayment.md)
+[**\OpenAPI\Client\Model\OrderPayment**](../Model/OrderPayment.md)
 
 ### Authorization
 
